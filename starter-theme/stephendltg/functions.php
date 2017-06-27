@@ -7,6 +7,8 @@
  * @package stephendltg
  */
 
+define( 'MP_DEV', 'true' );
+
 if ( ! function_exists( 'stephendltg_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -104,8 +106,13 @@ add_action( 'widgets_init', 'stephendltg_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
 function stephendltg_scripts() {
-	wp_enqueue_style( 'stephendltg-style', get_stylesheet_uri() );
+    
+    if ( !defined('MP_DEV') )
+	    wp_enqueue_style( 'stephendltg-style', get_stylesheet_uri() );
+    else
+        wp_enqueue_style( 'stephendltg-style', get_template_directory_uri() . '/sass/style.css' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
