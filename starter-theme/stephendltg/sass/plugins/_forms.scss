@@ -1,0 +1,657 @@
+@mixin firefox-message($selector) {
+  body.firefox #{$selector}:before {
+    content: "Hi, Firefox users!";
+  }
+}
+
+@include firefox-message(".header");
+
+
+/*---------------------------------------------------------------*/
+
+/* FormHack v1.2.0 (formhack.io) */
+
+// Config -----------------------------
+
+// Font
+$fh-font-family: 'Raleway', sans-serif !default;
+$fh-font-size: 16px !default;
+$fh-font-color: rgb(40, 40, 40) !default;
+
+// Borders
+$fh-border-radius: 5px !default;
+$fh-border-width: 1px !default;
+$fh-border-style: solid !default;
+$fh-border-color: rgb(200, 200, 200) !default;
+
+// Inputs, Textareas, Select, Option
+$fh-input-height: 40px !default;
+$fh-input-width: 100% !default;
+$fh-input-max-width: 400px !default;
+$fh-input-bg-color: #fff !default;
+$fh-focus-bg-color: rgb(220, 220, 220) !default;
+$fh-focus-border-color: $fh-border-color !default;
+$fh-focus-font-color: $fh-font-color !default;
+
+// Select Vendor Styling
+$fh-allow-select-vendor-styling: true !default;
+
+// Fieldset & Legend Styling
+$fh-fieldset-bare: false !default;
+
+// Buttons & Input Submits
+$fh-button-height: 40px !default;
+$fh-button-width: 100% !default;
+$fh-button-max-width: 200px !default;
+$fh-button-font-color: $fh-font-color !default;
+$fh-button-bg-color: $fh-focus-bg-color !default;
+$fh-button-hover-bg-color: $fh-border-color !default;
+$fh-button-hover-font-color: $fh-font-color !default;
+
+// Layout
+$fh-centered: false !default;
+$fh-display: block !default;
+
+
+// Center/Left-Aligned Layout
+@mixin center-layout {
+  @if $fh-centered == true {
+    margin: 10px auto;
+    text-align: center;
+  }
+  @else {
+    margin: 10px 0;
+  }
+}
+
+/* Global Reset Styles ------------------ */
+
+input,
+textarea,
+select,
+option,
+optgroup,
+button,
+legend,
+fieldset {
+  box-sizing: border-box;
+  outline: none;
+
+  font-family: $fh-font-family;
+  font-size: $fh-font-size;
+  color: $fh-font-color;
+  vertical-align: top;
+
+  display: $fh-display;
+  @include center-layout;
+}
+
+
+datalist {
+  font-family: $fh-font-family;
+  font-size: $fh-font-size;
+}
+
+label {
+  display: $fh-display;
+  @include center-layout;
+}
+
+
+
+/* Input & Textarea ------------------ */
+
+/* Fields with standard width */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list],
+input[type="file"],
+select,
+textarea {
+  width: $fh-input-width;
+  max-width: $fh-input-max-width;
+  padding: $fh-input-height / 5;
+  background-color: $fh-input-bg-color;
+
+  border-radius: $fh-border-radius;
+  border: $fh-border-width $fh-border-style $fh-border-color;
+}
+
+/* Fields with standard height */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list] {
+  height: $fh-input-height;
+  -webkit-appearance: none;
+}
+
+/* Other */
+
+textarea {
+  -webkit-appearance: none;
+  overflow: auto;
+}
+
+input[type="range"] {
+  height: $fh-input-height;
+  width: $fh-input-width;
+  max-width: $fh-input-max-width;
+}
+
+input[type="file"] {
+  min-height: $fh-input-height;
+}
+
+input[type="search"] {
+  height: $fh-input-height;
+  -webkit-appearance: none;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+// For checkbox and radio to be centered, need to wrap the input and label in a span -
+// .checkbox-container {
+//  display: block;
+//  text-align: center;
+// }
+
+
+/* Select ------------------ */
+
+select {
+  height: $fh-input-height;
+
+  @if $fh-allow-select-vendor-styling == false {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
+
+select[multiple] {
+  height: auto;
+  min-height: $fh-input-height;
+  padding: 0;
+
+  option {
+    margin: 0;
+    padding: $fh-input-height / 5;
+  }
+}
+
+/* Fieldset ------------------ */
+
+fieldset {
+  @if $fh-fieldset-bare == true {
+    padding: 0;
+    border: 0;
+  }
+  @else {
+    padding: 10px 25px;
+    border-radius: $fh-border-radius;
+    border: $fh-border-width $fh-border-style $fh-border-color;
+  }
+}
+
+legend {
+  @if $fh-fieldset-bare == true {
+    padding: 0;
+    font-weight: inherit;
+  }
+  @else {
+    padding: 0 5px;
+    font-weight: 700;
+  }
+}
+
+/* Buttons, Input Type Submit/Reset ------------------ */
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"] {
+  height: $fh-button-height;
+  width: $fh-button-width;
+  max-width: $fh-button-max-width;
+  background-color: $fh-button-bg-color;
+  padding: $fh-input-height / 5;
+  cursor: pointer;
+
+  color: $fh-button-font-color;
+  font-weight: 700;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border-radius: $fh-border-radius;
+  border: $fh-border-width $fh-border-style $fh-border-color;
+}
+
+input[type="image"] {
+  text-align: center;
+  padding: $fh-input-height / 5;
+}
+
+/* States ------------------ */
+
+input[disabled],
+textarea[disabled],
+select[disabled],
+option[disabled],
+button[disabled] {
+  cursor: not-allowed;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus  {
+  background-color: $fh-focus-bg-color;
+  border-color: $fh-focus-border-color;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline: $fh-focus-border-color solid 2px;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+  background-color: $fh-button-hover-bg-color;
+  color: $fh-button-hover-font-color;
+}
+
+/*-------------------------------------------------------------------*/
+
+/* ----------------------------- */
+/* == Button 				     */
+/* ----------------------------- */
+
+// Button variables
+$button-color: $color2; 		// Couleur texte 
+$button-border: $color1;		// Couleur de la bordure
+$button-background : $color1;	// Couleur du background
+$button-hover-color: $color3;   // Couleur au survol
+
+// Styling Button
+.btn,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	background-color: $button-background;
+	border: .1rem solid $button-border;
+	border-radius: .4rem;
+	color: $button-color;
+	cursor: pointer;
+	font-size: 1.1rem;
+	font-weight: 700;
+	height: 3.8rem;
+	letter-spacing: .1rem;
+	line-height: 3.8rem;
+	padding: 0 3.0rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+
+	&:focus,
+	&:hover {
+		background-color: $button-hover-color;
+		border-color: $button-hover-color;
+		color: $button-color;
+		outline: 0;
+	}
+
+	&[disabled] {
+		cursor: default;
+		opacity: .5;
+		&:focus,
+		&:hover {
+			background-color: $button-background;
+			border-color: $button-background;
+		}
+	}
+
+	&.button-outline {
+		background-color: transparent;
+		color: $button-color;
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			border-color: $button-hover-color;
+			color: $button-hover-color;
+		}
+		&[disabled] {
+			&:focus,
+			&:hover {
+				border-color: inherit;
+				color: $button-color;
+			}
+		}
+	}
+
+	&.button-clear {
+		background-color: transparent;
+		border-color: transparent;
+		color: $button-color;
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			border-color: transparent;
+			color: $button-hover-color;
+		}
+		&[disabled] {
+			&:focus,
+			&:hover {
+				color: $button-color;
+			}
+		}
+	}
+}
+
+
+/* ----------------------------- */
+/* == Input 				     */
+/* ----------------------------- */
+
+// Input variables
+$border-color : #ddd;
+$border-focus-color: $color3;
+
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+input[type="date"],
+input[type="time"],
+input[type="week"],
+input[type="month"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+	appearance: none; // Removes awkward default styles on some inputs for iOS
+	background-color: transparent;
+	border: .1rem solid $border-color;
+	border-radius: .4rem;
+	box-shadow: none;
+	height: 3.8rem;
+	padding: .6rem 1.0rem; // The .6rem vertically centers text on FF, ignored by Webkit
+	&:focus {
+		border-color: $border-focus-color;
+		outline: 0;
+	}
+}
+
+select {
+	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#d1d1d1" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>') center right no-repeat;
+	padding-right: 3.0rem;
+	&:focus {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#9b4dca" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
+	}
+}
+
+
+input[type="color"]{
+	padding: 0.3rem;
+
+}
+
+textarea {
+	min-height: 6.5rem;
+}
+
+
+/* ----------------------------- */
+/* == input range    		     */
+/* ----------------------------- */
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+    
+    /*required for proper track sizing in FF*/
+    width: 300px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $color3; //goldenrod;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $color3;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $color3;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
+
+
+
+/* ----------------------------- */
+/* == radio, checkbox 		     */
+/* ----------------------------- */
+
+/* Cachons la case à cocher */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked,
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+ 
+/* on prépare le label */
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label,
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative; /* permet de positionner les pseudo-éléments */
+  padding-left: 25px; /* fait un peu d'espace pour notre case à venir */
+  cursor: pointer;    /* affiche un curseur adapté */
+}
+
+/* :before sert à créer la case à cocher */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: 2px;
+  width: 16px; height: 16px; /* dim. de la case */
+  border: 1px solid #000;
+  background: #fff;
+}
+ 
+/* Aspect général de la coche */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: 0; left: 4px;
+  font-size: 14px;
+  color: #000;
+}
+
+
+/* :before sert à créer la case à cocher */
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: 2px;
+  width: 16px; height: 16px; /* dim. de la case */
+  border: 1px solid #000;
+  background: #fff;
+  border-radius: 50%;
+}
+ 
+/* Aspect général de la coche */
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
+  content: '';
+  position: absolute;
+  top: 5px; left: 3px;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+/* Aspect si "pas cochée" */
+[type="checkbox"]:not(:checked) + label:after,
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0; /* coche invisible */
+  transform: scale(0);/* mise à l'échelle à 0 */
+}
+
+/* Aspect si "cochée" */
+[type="checkbox"]:checked + label:after,
+[type="radio"]:checked + label:after {
+  opacity: 1; /* coche opaque */
+  transform: scale(1); /* mise à l'échelle 1:1 */
+}
+
+/* aspect désactivée */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before,
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
+  border-color: #000;
+  background-color: #fff;
+}
+
+/* styles de la coche (si cochée/désactivée) */
+[type="checkbox"]:disabled:checked + label:after,
+[type="radio"]:disabled:checked + label:after {
+  color: #999;
+}
+
+/* on style aussi le label quand désactivé */
+[type="checkbox"]:disabled + label,
+[type="radio"]:disabled + label {
+  color: #aaa;
+}
+ 
+/* aspect au focus de l'élément */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before,
+[type="radio"]:checked:focus + label:before,
+[type="radio"]:not(:checked):focus + label:before {
+  border: 1px solid #000;
+}

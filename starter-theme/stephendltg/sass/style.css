@@ -1,0 +1,4291 @@
+@charset "UTF-8";
+/*!
+* www.KNACSS.com v6.1.1 (21 avril 2017) @author: Alsacreations, Raphael Goetter
+* Licence WTFPL http://www.wtfpl.net/
+
+Theme Name: stephendltg
+Theme URI: http://underscores.me/
+Author: stephen deletang
+Author URI: http://underscores.me/
+Description: theme blog stephen deletang
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: stephendltg
+Tags:
+
+*/
+/* ----------------------------- */
+/* ==Table Of Content            */
+/* ----------------------------- */
+/* 1- Normalize (basic reset) */
+/* 2- Base (basic styles) */
+/* 3- Print (print quick reset) */
+/* 4- Stylings (minor stylings) */
+/* 5- Misc (skip links, hyphens) */
+/* 6- Tables (data tables consistency) */
+/* 7- Forms (forms consistency) */
+/* 8- Media object */
+/* 9- Autogrid object */
+/* 10- Global Layout (alignment, modules, positionning) */
+/* 11- Helpers (width and spacers helpers) */
+/* (12- WordPress reset (disabled by default)) */
+/* 13- Responsive (Responsive Web Design helpers) */
+/* 14- Grid Layout (grillade) */
+/* ---------------------------------- */
+/* ==Normalize (basic reset)          */
+/* ---------------------------------- */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+/* line 13, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+body {
+  margin: 0; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 49, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+/* line 62, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 72, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 81, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 92, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 115, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 125, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 135, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 144, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 154, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 165, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 173, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 182, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 191, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 199, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 203, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 214, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 223, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 232, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 240, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 252, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 268, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 278, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 289, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 300, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 312, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 323, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 336, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 350, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 359, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 368, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 378, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 388, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+/* line 397, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 407, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+/* line 420, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 429, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 440, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+/* line 448, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+/* line 459, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/_vendor/_normalize.scss */
+[hidden] {
+  display: none; }
+
+/* ----------------------------- */
+/* ==Base (basic styles)         */
+/* ----------------------------- */
+/* switching to border-box model for all elements */
+/* line 6, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+html {
+  box-sizing: border-box; }
+
+/* line 10, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+* {
+  box-sizing: inherit; }
+
+/* line 14, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+html {
+  /* set base font-size to equiv "10px", which is adapted to rem unit */
+  font-size: 62.5%;
+  /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+  /* thanks to @guardian, @victorbritopro and @eQRoeil */
+  font-size: calc(1em * 0.625); }
+
+/* line 22, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+body {
+  font-size: 1.4rem;
+  background-color: #fff;
+  color: #000;
+  font-family: sans-serif;
+  line-height: 1.4; }
+  @media (min-width: 544px) {
+    /* line 22, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+    body {
+      font-size: 1.6rem; } }
+  @media (min-width: 544px) {
+    /* line 22, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+    body {
+      line-height: 1.5; } }
+
+/* line 40, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+a {
+  color: #333; }
+  /* line 47, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+  a:focus, a:hover, a:active {
+    color: #000; }
+
+/* line 55, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+ul,
+ol {
+  padding-left: 2em; }
+
+/* line 60, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+img {
+  vertical-align: middle; }
+
+/* line 64, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+blockquote,
+figure {
+  margin-left: 0;
+  margin-right: 0; }
+
+/* font-sizing for content */
+/* line 71, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+p,
+.p-like,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+td,
+th,
+label,
+textarea,
+caption,
+details,
+figure {
+  margin-top: 0.75em;
+  margin-bottom: 0;
+  line-height: 1.4; }
+
+/* line 77, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+h1, .h1-like {
+  font-size: 2.8rem; }
+  @media (min-width: 544px) {
+    /* line 77, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+    h1, .h1-like {
+      font-size: 3.2rem; } }
+
+/* line 89, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+h2, .h2-like {
+  font-size: 2.4rem; }
+  @media (min-width: 544px) {
+    /* line 89, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+    h2, .h2-like {
+      font-size: 2.8rem; } }
+
+/* line 101, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+h3, .h3-like {
+  font-size: 2rem; }
+  @media (min-width: 544px) {
+    /* line 101, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+    h3, .h3-like {
+      font-size: 2.4rem; } }
+
+/* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+h4, .h4-like {
+  font-size: 1.8rem; }
+  @media (min-width: 544px) {
+    /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+    h4, .h4-like {
+      font-size: 2rem; } }
+
+/* line 119, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+h5, .h5-like {
+  font-size: 1.6rem; }
+  @media (min-width: 544px) {
+    /* line 119, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+    h5, .h5-like {
+      font-size: 1.8rem; } }
+
+/* line 128, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+h6, .h6-like {
+  font-size: 1.4rem; }
+  @media (min-width: 544px) {
+    /* line 128, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+    h6, .h6-like {
+      font-size: 1.6rem; } }
+
+/* alternate font-sizing */
+/* line 138, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+.smaller {
+  font-size: 0.6em; }
+
+/* line 142, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+.small {
+  font-size: 0.8em; }
+
+/* line 146, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+.big {
+  font-size: 1.2em; }
+
+/* line 150, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+.bigger {
+  font-size: 1.5em; }
+
+/* line 154, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+.biggest {
+  font-size: 2em; }
+
+/* line 158, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+code,
+pre,
+samp,
+kbd {
+  /* IE fix */
+  white-space: pre-line;
+  white-space: pre-wrap;
+  font-family: consolas, courier, monospace;
+  line-height: normal; }
+
+/* line 169, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+em,
+.italic,
+address,
+cite,
+i,
+var {
+  font-style: italic; }
+
+/* avoid top margins on first content element */
+/* line 175, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+p:first-child,
+.p-like:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child,
+blockquote:first-child,
+pre:first-child,
+h1:first-child,
+.h1-like:first-child,
+h2:first-child,
+.h2-like:first-child,
+h3:first-child,
+.h3-like:first-child,
+h4:first-child,
+.h4-like:first-child,
+h5:first-child,
+.h5-like:first-child,
+h6:first-child,
+.h6-like:first-child {
+  margin-top: 0; }
+
+/* avoid margins on nested elements */
+/* line 181, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+li p,
+li .p-like,
+li ul,
+li ol {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+/* max values */
+/* line 187, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video,
+svg {
+  max-width: 100%; }
+
+/* line 200, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_base.scss */
+img {
+  height: auto; }
+
+/* ----------------------------- */
+/* ==Print (quick print reset)   */
+/* ----------------------------- */
+@media print {
+  /* line 6, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_print.scss */
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  /* line 12, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_print.scss */
+  body {
+    width: auto;
+    margin: auto;
+    font-family: serif;
+    font-size: 12pt; }
+  /* line 19, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_print.scss */
+  p,
+  .p-like,
+  h1,
+  .h1-like,
+  h2,
+  .h2-like,
+  h3,
+  .h3-like,
+  h4,
+  .h4-like,
+  h5,
+  .h5-like,
+  h6,
+  .h6-like,
+  blockquote,
+  ul,
+  ol {
+    color: #000;
+    margin: auto; }
+  /* line 24, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_print.scss */
+  .print {
+    display: block; }
+  /* line 28, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_print.scss */
+  .no-print {
+    display: none; }
+  /* no orphans, no widows */
+  /* line 33, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_print.scss */
+  p,
+  .p-like,
+  blockquote {
+    orphans: 3;
+    widows: 3; }
+  /* no breaks inside these elements */
+  /* line 39, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_print.scss */
+  blockquote,
+  ul,
+  ol {
+    page-break-inside: avoid; }
+  /* page break before main headers
+  h1,
+  .h1-like {
+    page-break-before: always;
+  }
+  */
+  /* no breaks after these elements */
+  /* line 53, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_print.scss */
+  h1,
+  .h1-like,
+  h2,
+  .h2-like,
+  h3,
+  .h3-like,
+  caption {
+    page-break-after: avoid; }
+  /* line 57, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_print.scss */
+  a {
+    color: #000; }
+  /* displaying URLs
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  */
+  /* line 69, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_print.scss */
+  a[href^="javascript:"]::after,
+  a[href^="#"]::after {
+    content: ""; } }
+
+/* ----------------------------- */
+/* ==Stylings (minor stylings)   */
+/* ----------------------------- */
+/* styling elements */
+/* line 6, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+code,
+kbd,
+mark {
+  border-radius: 2px; }
+
+/* line 12, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+kbd {
+  padding: 0 2px;
+  border: 1px solid #999; }
+
+/* line 17, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+code {
+  padding: 2px 4px;
+  background: rgba(0, 0, 0, 0.04);
+  color: #b11; }
+
+/* line 23, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+pre code {
+  padding: 0;
+  background: none;
+  color: inherit;
+  border-radius: 0; }
+
+/* line 30, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+mark {
+  padding: 2px 4px; }
+
+/* line 34, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+sup,
+sub {
+  vertical-align: 0; }
+
+/* line 39, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+sup {
+  bottom: 1ex; }
+
+/* line 43, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+sub {
+  top: 0.5ex; }
+
+/* line 47, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+blockquote {
+  position: relative;
+  padding-left: 3em;
+  min-height: 2em; }
+
+/* line 53, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+blockquote::before {
+  content: "\201C";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: georgia, serif;
+  font-size: 5em;
+  height: .4em;
+  line-height: .9;
+  color: rgba(0, 0, 0, 0.3); }
+
+/* line 65, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+blockquote > footer {
+  margin-top: .75em;
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.7); }
+  /* line 70, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+  blockquote > footer::before {
+    content: "\2014 \0020"; }
+
+/* line 75, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+q {
+  font-style: normal; }
+
+/* line 79, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+q,
+.q {
+  quotes: "“\00a0" "\00a0”"; }
+  /* line 82, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+  q:lang(fr),
+  .q:lang(fr) {
+    quotes: "«\00a0" "\00a0»"; }
+
+/* line 87, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+hr {
+  display: block;
+  clear: both;
+  height: 1px;
+  margin: 1em 0 2em;
+  padding: 0;
+  border: 0;
+  color: #ccc;
+  background-color: #ccc; }
+
+/* tables */
+/* line 99, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+table,
+.table {
+  border: 1px solid #ccc; }
+
+/* line 103, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+caption {
+  padding: 1rem;
+  color: #555;
+  font-style: italic; }
+
+/* line 109, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_styling.scss */
+td,
+th {
+  padding: 0.3em 0.8em;
+  border: 1px #aaa dotted;
+  text-align: left; }
+
+/* ----------------------------- */
+/* ==Misc (skip links, hyphens)  */
+/* ----------------------------- */
+/* styling skip links */
+/* line 6, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_misc.scss */
+.skip-links {
+  position: absolute; }
+  /* line 9, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_misc.scss */
+  .skip-links a {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0.5em;
+    background: black;
+    color: white;
+    text-decoration: none; }
+    /* line 18, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_misc.scss */
+    .skip-links a:focus {
+      position: static;
+      overflow: visible;
+      clip: auto; }
+
+@media (max-width: 543px) {
+  /* you shall not pass */
+  /* line 29, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_misc.scss */
+  div,
+  textarea,
+  table,
+  td,
+  th,
+  code,
+  pre,
+  samp {
+    word-wrap: break-word;
+    hyphens: auto; } }
+
+@media (max-width: 543px) {
+  /* line 44, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_misc.scss */
+  .no-wrapping {
+    word-wrap: normal;
+    hyphens: manual; } }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* line 52, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_misc.scss */
+  img[src$=".svg"] {
+    width: 100%; } }
+
+/* ----------------------------- */
+/* ==Tables                      */
+/* ----------------------------- */
+/* line 5, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_tables.scss */
+table,
+.table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  vertical-align: top;
+  margin-bottom: 2rem; }
+
+/* line 14, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_tables.scss */
+.table {
+  display: table; }
+
+/* line 18, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_tables.scss */
+#recaptcha_table,
+.table-auto {
+  table-layout: auto; }
+
+/* line 22, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_tables.scss */
+td,
+th {
+  vertical-align: top;
+  min-width: 2rem;
+  cursor: default; }
+
+/* ----------------------------- */
+/* ==Forms                       */
+/* ----------------------------- */
+/* thanks to HTML5boilerplate,
+* github.com/nathansmith/formalize and www.sitepen.com
+*/
+/* buttons */
+/* line 10, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+.btn {
+  display: inline-block; }
+
+/* forms items */
+/* line 15, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+form,
+fieldset {
+  border: none; }
+
+/* line 20, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+input,
+button,
+select,
+label,
+.btn {
+  font-family: inherit;
+  font-size: inherit; }
+
+/* line 25, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: #000; }
+
+/* line 33, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+label {
+  vertical-align: middle;
+  cursor: pointer; }
+
+/* line 38, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+legend {
+  border: 0;
+  white-space: normal; }
+
+/* line 43, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+textarea {
+  min-height: 5em;
+  vertical-align: top;
+  font-family: inherit;
+  font-size: inherit;
+  resize: vertical; }
+
+/* line 51, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+select {
+  -webkit-appearance: menulist-button; }
+
+/* if select styling bugs on WebKit */
+/* select { -webkit-appearance: none; } */
+/* 'x' appears on right of search input when text is entered. This removes it */
+/* line 60, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
+  display: none; }
+
+/* line 68, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+::-webkit-input-placeholder {
+  color: #777; }
+
+/* line 72, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #777; }
+
+/* line 78, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+.btn:focus,
+input[type="button"]:focus,
+button:focus {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* unstyled forms */
+/* line 93, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+button.unstyled,
+input[type="button"].unstyled,
+input[type="submit"].unstyled,
+input[type="reset"].unstyled {
+  padding: 0;
+  border: none;
+  line-height: 1;
+  text-align: left;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  /* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/library/_forms.scss */
+  button.unstyled:focus,
+  input[type="button"].unstyled:focus,
+  input[type="submit"].unstyled:focus,
+  input[type="reset"].unstyled:focus {
+    box-shadow: none;
+    outline: none; }
+
+/* Media object */
+/* see http://codepen.io/raphaelgoetter/pen/KMWWwj */
+@media (min-width: 544px) {
+  /* line 4, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/objects/_media.scss */
+  .o-media {
+    display: flex;
+    align-items: flex-start; }
+  /* line 9, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/objects/_media.scss */
+  .o-media-content {
+    flex: 1;
+    min-width: 0;
+    /* avoid min-width:auto */ } }
+
+/* Media variants */
+@media (min-width: 544px) {
+  /* line 17, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/objects/_media.scss */
+  .o-media--reverse {
+    flex-direction: row-reverse; }
+  /* line 21, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/objects/_media.scss */
+  .o-media-figure--center {
+    align-self: center; } }
+
+/* Autogrid object */
+/* see http://codepen.io/raphaelgoetter/pen/KMgBJd */
+@media (min-width: 544px) {
+  /* line 4, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/objects/_autogrid.scss */
+  [class^="autogrid"],
+  [class*=" autogrid"] {
+    display: flex; }
+  /* line 9, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/objects/_autogrid.scss */
+  [class^="autogrid"] > *,
+  [class*=" autogrid"] > * {
+    flex: 1;
+    min-width: 0;
+    /* avoid min-width:auto */ } }
+
+/* Autogrid variants */
+@media (min-width: 544px) {
+  /* line 18, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/objects/_autogrid.scss */
+  .has-gutter > *:not(:first-child) {
+    margin-left: 1rem; }
+  /* line 22, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/objects/_autogrid.scss */
+  [class*="--reverse"] {
+    flex-direction: row-reverse; } }
+
+/* ----------------------------- */
+/* ==Global Layout               */
+/* ----------------------------- */
+/* module, gains superpower "BFC" Block Formating Context */
+/* line 6, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.mod,
+.bfc {
+  overflow: hidden; }
+
+/* blocks that needs to be placed under floats */
+/* line 12, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.clear {
+  clear: both; }
+
+/* blocks that must contain floats */
+/* line 18, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+  border-collapse: collapse; }
+
+/* simple blocks alignment */
+/* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.left {
+  margin-right: auto; }
+
+/* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.right {
+  margin-left: auto; }
+
+/* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.center {
+  margin-left: auto;
+  margin-right: auto; }
+
+/* text and contents alignment */
+/* line 41, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.txtleft {
+  text-align: left; }
+
+/* line 45, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.txtright {
+  text-align: right; }
+
+/* line 49, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.txtcenter {
+  text-align: center; }
+
+/* floating elements */
+/* line 54, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.fl {
+  float: left; }
+
+/* line 58, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+img.fl {
+  margin-right: 1rem; }
+
+/* line 62, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.fr {
+  float: right; }
+
+/* line 66, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+img.fr {
+  margin-left: 1rem; }
+
+/* line 70, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+img.fl,
+img.fr {
+  margin-bottom: 0.5rem; }
+
+/* inline-block */
+/* line 75, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.inbl {
+  display: inline-block;
+  vertical-align: top; }
+
+/* flexbox layout
+http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
+*/
+/* line 84, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+[class*="flex-container"],
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; }
+
+/* line 89, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.flex-container-h {
+  flex-direction: row; }
+
+/* line 93, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.flex-container-v {
+  flex-direction: column; }
+
+/* line 97, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.flex-item-fluid {
+  flex: 1;
+  min-width: 0; }
+
+/* line 102, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.flex-item-first,
+.item-first {
+  order: -1; }
+
+/* line 106, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.flex-item-medium,
+.item-medium {
+  order: 0; }
+
+/* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.flex-item-last,
+.item-last {
+  order: 1; }
+
+/* line 114, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_layout.scss */
+.flex-item-center,
+.item-center {
+  margin: auto; }
+
+/* ---------------------------------- */
+/* ==Helpers                          */
+/* ---------------------------------- */
+/* State Helpers */
+/* ------------- */
+/* invisible for all */
+/* line 9, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.is-hidden,
+[hidden] {
+  display: none; }
+
+/* hidden but not for an assistive technology like a screen reader, Yahoo! method */
+/* line 15, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.visually-hidden {
+  position: absolute !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important; }
+
+/* line 25, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.is-disabled,
+[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: grayscale(1); }
+
+/* line 34, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+ul.is-unstyled, ul.unstyled {
+  list-style: none;
+  padding-left: 0; }
+
+/* Width Helpers */
+/* ------------- */
+/* blocks widths (percentage and pixels) */
+/* line 45, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w10 {
+  width: 10%; }
+
+/* line 49, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w20 {
+  width: 20%; }
+
+/* line 53, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w25 {
+  width: 25%; }
+
+/* line 57, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w30 {
+  width: 30%; }
+
+/* line 61, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w33 {
+  width: 33.3333%; }
+
+/* line 65, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w40 {
+  width: 40%; }
+
+/* line 69, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w50 {
+  width: 50%; }
+
+/* line 73, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w60 {
+  width: 60%; }
+
+/* line 77, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w66 {
+  width: 66.6666%; }
+
+/* line 81, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w70 {
+  width: 70%; }
+
+/* line 85, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w75 {
+  width: 75%; }
+
+/* line 89, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w80 {
+  width: 80%; }
+
+/* line 93, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w90 {
+  width: 90%; }
+
+/* line 97, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w100 {
+  width: 100%; }
+
+/* line 101, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w50p {
+  width: 50px; }
+
+/* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w100p {
+  width: 100px; }
+
+/* line 109, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w150p {
+  width: 150px; }
+
+/* line 113, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w200p {
+  width: 200px; }
+
+/* line 117, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.w300p {
+  width: 300px; }
+
+@media (min-width: 401px) {
+  /* line 122, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+  .w400p {
+    width: 400px; }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+  .w500p {
+    width: 500px; }
+  /* line 130, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+  .w600p {
+    width: 600px; } }
+
+@media (min-width: 701px) {
+  /* line 137, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+  .w700p {
+    width: 700px; }
+  /* line 141, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+  .w800p {
+    width: 800px; } }
+
+@media (min-width: 961px) {
+  /* line 147, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+  .w960p {
+    width: 960px; }
+  /* line 151, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+  .mw960p {
+    max-width: 960px; }
+  /* line 155, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+  .w1140p {
+    width: 1140px; }
+  /* line 159, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+  .mw1140p {
+    max-width: 1140px; } }
+
+/* line 164, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.wauto {
+  width: auto; }
+
+/* Spacing Helpers */
+/* --------------- */
+/* line 171, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.man,
+.ma0 {
+  margin: 0; }
+
+/* line 175, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.pan,
+.pa0 {
+  padding: 0; }
+
+/* line 179, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mas {
+  margin: 1rem; }
+
+/* line 183, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mam {
+  margin: 2rem; }
+
+/* line 187, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mal {
+  margin: 4rem; }
+
+/* line 191, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.pas {
+  padding: 1rem; }
+
+/* line 195, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.pam {
+  padding: 2rem; }
+
+/* line 199, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.pal {
+  padding: 4rem; }
+
+/* line 203, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mtn,
+.mt0 {
+  margin-top: 0; }
+
+/* line 207, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mts {
+  margin-top: 1rem; }
+
+/* line 211, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mtm {
+  margin-top: 2rem; }
+
+/* line 215, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mtl {
+  margin-top: 4rem; }
+
+/* line 219, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mrn,
+.mr0 {
+  margin-right: 0; }
+
+/* line 223, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mrs {
+  margin-right: 1rem; }
+
+/* line 227, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mrm {
+  margin-right: 2rem; }
+
+/* line 231, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mrl {
+  margin-right: 4rem; }
+
+/* line 235, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mbn,
+.mb0 {
+  margin-bottom: 0; }
+
+/* line 239, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mbs {
+  margin-bottom: 1rem; }
+
+/* line 243, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mbm {
+  margin-bottom: 2rem; }
+
+/* line 247, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mbl {
+  margin-bottom: 4rem; }
+
+/* line 251, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mln,
+.ml0 {
+  margin-left: 0; }
+
+/* line 255, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mls {
+  margin-left: 1rem; }
+
+/* line 259, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mlm {
+  margin-left: 2rem; }
+
+/* line 263, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mll {
+  margin-left: 4rem; }
+
+/* line 267, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mauto {
+  margin: auto; }
+
+/* line 271, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mtauto {
+  margin-top: auto; }
+
+/* line 275, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mrauto {
+  margin-right: auto; }
+
+/* line 279, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mbauto {
+  margin-bottom: auto; }
+
+/* line 283, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.mlauto {
+  margin-left: auto; }
+
+/* line 287, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.ptn,
+.pt0 {
+  padding-top: 0; }
+
+/* line 291, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.pts {
+  padding-top: 1rem; }
+
+/* line 295, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.ptm {
+  padding-top: 2rem; }
+
+/* line 299, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.ptl {
+  padding-top: 4rem; }
+
+/* line 303, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.prn,
+.pr0 {
+  padding-right: 0; }
+
+/* line 307, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.prs {
+  padding-right: 1rem; }
+
+/* line 311, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.prm {
+  padding-right: 2rem; }
+
+/* line 315, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.prl {
+  padding-right: 4rem; }
+
+/* line 319, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.pbn,
+.pb0 {
+  padding-bottom: 0; }
+
+/* line 323, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.pbs {
+  padding-bottom: 1rem; }
+
+/* line 327, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.pbm {
+  padding-bottom: 2rem; }
+
+/* line 331, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.pbl {
+  padding-bottom: 4rem; }
+
+/* line 335, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.pln,
+.pl0 {
+  padding-left: 0; }
+
+/* line 339, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.pls {
+  padding-left: 1rem; }
+
+/* line 343, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.plm {
+  padding-left: 2rem; }
+
+/* line 347, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_helpers.scss */
+.pll {
+  padding-left: 4rem; }
+
+/* ----------------------------- */
+/* ==WordPress reset             */
+/* ----------------------------- */
+/*
+Author: Geoffrey Crofte, Alsacréations
+Contributors: Automattic, Geoffrey Crofte
+Description: Reset styles for WordPress usage of KNACSS
+*/
+/* line 20, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.comment-navigation,
+.paging-navigation,
+.post-navigation {
+  overflow: hidden;
+  margin: 0 0 1.5em; }
+  /* line 26, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+  .comment-navigation .nav-previous,
+  .paging-navigation .nav-previous,
+  .post-navigation .nav-previous {
+    float: left;
+    width: 50%; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+  .comment-navigation .nav-next,
+  .paging-navigation .nav-next,
+  .post-navigation .nav-next {
+    float: right;
+    width: 50%;
+    text-align: right; }
+
+/* line 39, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.alignnone {
+  margin: .25em 1.5em 1.5em 0; }
+
+/* line 43, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 1.5em auto; }
+
+/* line 49, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.alignleft {
+  float: left;
+  margin: 0 1.5em .25em 0; }
+
+/* line 54, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.alignright {
+  float: right;
+  margin: 0 0 .25em 1.5em; }
+
+/* line 59, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.entry-content,
+.comment-content {
+  clear: both; }
+  /* line 63, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+  .entry-content::after, .entry-content::before,
+  .comment-content::after,
+  .comment-content::before {
+    content: "";
+    display: table; }
+
+/* line 70, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.widget + .widget {
+  margin: 1.5em 0 0; }
+
+/* line 75, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.widget select {
+  max-width: 100%; }
+
+/* === 5.1 Posts - post_class === */
+/* === 5.2 Pages - body_class === */
+/* === 5.3 Posts and Pages - Contents === */
+/* line 183, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.hentry {
+  margin: 0 0 1.5em; }
+
+/* line 187, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0; }
+
+/* line 193, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+/* line 198, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.comment-content a {
+  word-wrap: break-word; }
+
+/* line 206, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+img.wp-smiley {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+  border: none; }
+
+/* line 213, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.wp-caption {
+  max-width: 100%;
+  margin-bottom: 1.5em; }
+
+/* line 218, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.wp-caption img {
+  display: block;
+  margin: 0 auto; }
+
+/* line 223, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.wp-caption-text {
+  margin: 1em 0;
+  text-align: center; }
+
+/* line 228, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.gallery {
+  margin-bottom: 1.5em; }
+
+/* line 232, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.gallery-item {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  vertical-align: top; }
+  /* line 239, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+  .gallery-columns-2 .gallery-item {
+    max-width: 50%; }
+  /* line 239, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+  .gallery-columns-3 .gallery-item {
+    max-width: 33.33%; }
+  /* line 239, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+  .gallery-columns-4 .gallery-item {
+    max-width: 25%; }
+  /* line 239, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+  .gallery-columns-5 .gallery-item {
+    max-width: 20%; }
+  /* line 239, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+  .gallery-columns-6 .gallery-item {
+    max-width: 16.66%; }
+  /* line 239, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+  .gallery-columns-7 .gallery-item {
+    max-width: 14.28%; }
+  /* line 239, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+  .gallery-columns-8 .gallery-item {
+    max-width: 12.5%; }
+  /* line 239, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+  .gallery-columns-9 .gallery-item {
+    max-width: 11.11%; }
+
+/* line 246, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_wordpress.scss */
+.gallery-caption {
+  display: block; }
+
+/* -------------------------- */
+/* ==Responsive helpers       */
+/* -------------------------- */
+/* large screens */
+/* ------------- */
+@media (min-width: 992px) {
+  /* layouts for large screens */
+  /* line 11, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .large-hidden {
+    display: none !important; }
+  /* line 15, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .large-visible {
+    display: block !important; }
+  /* line 19, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .large-no-float {
+    float: none; }
+  /* line 23, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .large-inbl {
+    display: inline-block;
+    float: none;
+    vertical-align: top; }
+  /* widths for large screens */
+  /* line 30, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .large-w25 {
+    width: 25% !important; }
+  /* line 34, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .large-w33 {
+    width: 33.333333% !important; }
+  /* line 38, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .large-w50 {
+    width: 50% !important; }
+  /* line 42, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .large-w66 {
+    width: 66.666666% !important; }
+  /* line 46, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .large-w75 {
+    width: 75% !important; }
+  /* line 50, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .large-w100,
+  .large-wauto {
+    display: block !important;
+    float: none !important;
+    clear: none !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border: 0; }
+  /* margins for large screens */
+  /* line 61, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .large-man,
+  .large-ma0 {
+    margin: 0 !important; } }
+
+/* medium screens */
+/* -------------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* layouts for medium screens */
+  /* line 72, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .medium-hidden {
+    display: none !important; }
+  /* line 76, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .medium-visible {
+    display: block !important; }
+  /* line 80, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .medium-no-float {
+    float: none; }
+  /* line 84, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .medium-inbl {
+    display: inline-block;
+    float: none;
+    vertical-align: top; }
+  /* widths for medium screens */
+  /* line 91, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .medium-w25 {
+    width: 25% !important; }
+  /* line 95, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .medium-w33 {
+    width: 33.333333% !important; }
+  /* line 99, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .medium-w50 {
+    width: 50% !important; }
+  /* line 103, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .medium-w66 {
+    width: 66.666666% !important; }
+  /* line 107, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .medium-w75 {
+    width: 75% !important; }
+  /* line 111, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .medium-w100,
+  .medium-wauto {
+    display: block !important;
+    float: none !important;
+    clear: none !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border: 0; }
+  /* margins for medium screens */
+  /* line 122, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .medium-man,
+  .medium-ma0 {
+    margin: 0 !important; } }
+
+/* small screens */
+/* ------------- */
+@media (min-width: 544px) and (max-width: 767px) {
+  /* layouts for small screens */
+  /* line 133, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .small-hidden {
+    display: none !important; }
+  /* line 137, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .small-visible {
+    display: block !important; }
+  /* line 141, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .small-no-float {
+    float: none; }
+  /* line 145, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .small-inbl {
+    display: inline-block;
+    float: none;
+    vertical-align: top; }
+  /* widths for small screens */
+  /* line 152, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .small-w25 {
+    width: 25% !important; }
+  /* line 156, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .small-w33 {
+    width: 33.333333% !important; }
+  /* line 160, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .small-w50 {
+    width: 50% !important; }
+  /* line 164, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .small-w66 {
+    width: 66.666666% !important; }
+  /* line 168, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .small-w75 {
+    width: 75% !important; }
+  /* line 172, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .small-w100,
+  .small-wauto {
+    display: block !important;
+    float: none !important;
+    clear: none !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border: 0; }
+  /* margins for small screens */
+  /* line 183, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .small-man,
+  .small-ma0 {
+    margin: 0 !important; }
+  /* line 187, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .small-pan,
+  .small-pa0 {
+    padding: 0 !important; } }
+
+/* tiny screens */
+/* ------------ */
+@media (max-width: 543px) {
+  /* quick small resolution reset */
+  /* line 199, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .mod,
+  .col,
+  fieldset {
+    display: block !important;
+    float: none !important;
+    clear: none !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border: 0; }
+  /* line 209, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .flex-container {
+    flex-direction: column; }
+  /* layouts for tiny screens */
+  /* line 214, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .tiny-hidden {
+    display: none !important; }
+  /* line 218, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .tiny-visible {
+    display: block !important; }
+  /* line 222, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .tiny-no-float {
+    float: none; }
+  /* line 226, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .tiny-inbl {
+    display: inline-block;
+    float: none;
+    vertical-align: top; }
+  /* widths for tiny screens */
+  /* line 233, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .tiny-w25 {
+    width: 25% !important; }
+  /* line 237, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .tiny-w33 {
+    width: 33.333333% !important; }
+  /* line 241, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .tiny-w50 {
+    width: 50% !important; }
+  /* line 245, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .tiny-w66 {
+    width: 66.666666% !important; }
+  /* line 249, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .tiny-w75 {
+    width: 75% !important; }
+  /* line 253, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .tiny-w100,
+  .tiny-wauto {
+    display: block !important;
+    float: none !important;
+    clear: none !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border: 0; }
+  /* margins for tiny screens */
+  /* line 264, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .tiny-man,
+  .tiny-ma0 {
+    margin: 0 !important; }
+  /* line 268, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/utilities/_responsive.scss */
+  .tiny-pan,
+  .tiny-pa0 {
+    padding: 0 !important; } }
+
+/* ---------------------------------- */
+/* ==Grillade : Simple Grid System    */
+/* ---------------------------------- */
+/* Doc : http://grillade.knacss.com */
+@media (min-width: 544px) {
+  /* line 11, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*=" grid-"],
+  [class^="grid-"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    /* line 17, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*=" grid-"] > *,
+    [class^="grid-"] > * {
+      box-sizing: border-box;
+      min-width: 0;
+      min-height: 0; } }
+
+@media (min-width: 544px) {
+  /* line 55, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .grid,
+  .grid--reverse {
+    display: flex; }
+    /* line 59, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    .grid > *,
+    .grid--reverse > * {
+      flex: 1 1 0%;
+      box-sizing: border-box;
+      min-width: 0;
+      min-height: 0; }
+    /* line 66, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    .grid.has-gutter > * + *,
+    .grid--reverse.has-gutter > * + * {
+      margin-left: calc(1rem - 0.01px); }
+    /* line 66, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    .grid.has-gutter-l > * + *,
+    .grid--reverse.has-gutter-l > * + * {
+      margin-left: calc(2rem - 0.01px); }
+    /* line 66, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    .grid.has-gutter-xl > * + *,
+    .grid--reverse.has-gutter-xl > * + * {
+      margin-left: calc(4rem - 0.01px); } }
+
+@media (min-width: 544px) {
+  /* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-2"] > * {
+    width: calc(100% / 2 - 0.01px); }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-2"].has-gutter {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-2"].has-gutter > * {
+      width: calc(100% / 2 - 1rem - 0.01px);
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-2"].has-gutter-l {
+    margin-right: -1rem;
+    margin-left: -1rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-2"].has-gutter-l > * {
+      width: calc(100% / 2 - 2rem - 0.01px);
+      margin-right: 1rem;
+      margin-left: 1rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-2"].has-gutter-xl {
+    margin-right: -2rem;
+    margin-left: -2rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-2"].has-gutter-xl > * {
+      width: calc(100% / 2 - 4rem - 0.01px);
+      margin-right: 2rem;
+      margin-left: 2rem; }
+  /* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-3"] > * {
+    width: calc(100% / 3 - 0.01px); }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-3"].has-gutter {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-3"].has-gutter > * {
+      width: calc(100% / 3 - 1rem - 0.01px);
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-3"].has-gutter-l {
+    margin-right: -1rem;
+    margin-left: -1rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-3"].has-gutter-l > * {
+      width: calc(100% / 3 - 2rem - 0.01px);
+      margin-right: 1rem;
+      margin-left: 1rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-3"].has-gutter-xl {
+    margin-right: -2rem;
+    margin-left: -2rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-3"].has-gutter-xl > * {
+      width: calc(100% / 3 - 4rem - 0.01px);
+      margin-right: 2rem;
+      margin-left: 2rem; }
+  /* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-4"] > * {
+    width: calc(100% / 4 - 0.01px); }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-4"].has-gutter {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-4"].has-gutter > * {
+      width: calc(100% / 4 - 1rem - 0.01px);
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-4"].has-gutter-l {
+    margin-right: -1rem;
+    margin-left: -1rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-4"].has-gutter-l > * {
+      width: calc(100% / 4 - 2rem - 0.01px);
+      margin-right: 1rem;
+      margin-left: 1rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-4"].has-gutter-xl {
+    margin-right: -2rem;
+    margin-left: -2rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-4"].has-gutter-xl > * {
+      width: calc(100% / 4 - 4rem - 0.01px);
+      margin-right: 2rem;
+      margin-left: 2rem; }
+  /* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-5"] > * {
+    width: calc(100% / 5 - 0.01px); }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-5"].has-gutter {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-5"].has-gutter > * {
+      width: calc(100% / 5 - 1rem - 0.01px);
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-5"].has-gutter-l {
+    margin-right: -1rem;
+    margin-left: -1rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-5"].has-gutter-l > * {
+      width: calc(100% / 5 - 2rem - 0.01px);
+      margin-right: 1rem;
+      margin-left: 1rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-5"].has-gutter-xl {
+    margin-right: -2rem;
+    margin-left: -2rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-5"].has-gutter-xl > * {
+      width: calc(100% / 5 - 4rem - 0.01px);
+      margin-right: 2rem;
+      margin-left: 2rem; }
+  /* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-6"] > * {
+    width: calc(100% / 6 - 0.01px); }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-6"].has-gutter {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-6"].has-gutter > * {
+      width: calc(100% / 6 - 1rem - 0.01px);
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-6"].has-gutter-l {
+    margin-right: -1rem;
+    margin-left: -1rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-6"].has-gutter-l > * {
+      width: calc(100% / 6 - 2rem - 0.01px);
+      margin-right: 1rem;
+      margin-left: 1rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-6"].has-gutter-xl {
+    margin-right: -2rem;
+    margin-left: -2rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-6"].has-gutter-xl > * {
+      width: calc(100% / 6 - 4rem - 0.01px);
+      margin-right: 2rem;
+      margin-left: 2rem; }
+  /* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-7"] > * {
+    width: calc(100% / 7 - 0.01px); }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-7"].has-gutter {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-7"].has-gutter > * {
+      width: calc(100% / 7 - 1rem - 0.01px);
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-7"].has-gutter-l {
+    margin-right: -1rem;
+    margin-left: -1rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-7"].has-gutter-l > * {
+      width: calc(100% / 7 - 2rem - 0.01px);
+      margin-right: 1rem;
+      margin-left: 1rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-7"].has-gutter-xl {
+    margin-right: -2rem;
+    margin-left: -2rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-7"].has-gutter-xl > * {
+      width: calc(100% / 7 - 4rem - 0.01px);
+      margin-right: 2rem;
+      margin-left: 2rem; }
+  /* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-8"] > * {
+    width: calc(100% / 8 - 0.01px); }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-8"].has-gutter {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-8"].has-gutter > * {
+      width: calc(100% / 8 - 1rem - 0.01px);
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-8"].has-gutter-l {
+    margin-right: -1rem;
+    margin-left: -1rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-8"].has-gutter-l > * {
+      width: calc(100% / 8 - 2rem - 0.01px);
+      margin-right: 1rem;
+      margin-left: 1rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-8"].has-gutter-xl {
+    margin-right: -2rem;
+    margin-left: -2rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-8"].has-gutter-xl > * {
+      width: calc(100% / 8 - 4rem - 0.01px);
+      margin-right: 2rem;
+      margin-left: 2rem; }
+  /* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-9"] > * {
+    width: calc(100% / 9 - 0.01px); }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-9"].has-gutter {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-9"].has-gutter > * {
+      width: calc(100% / 9 - 1rem - 0.01px);
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-9"].has-gutter-l {
+    margin-right: -1rem;
+    margin-left: -1rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-9"].has-gutter-l > * {
+      width: calc(100% / 9 - 2rem - 0.01px);
+      margin-right: 1rem;
+      margin-left: 1rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-9"].has-gutter-xl {
+    margin-right: -2rem;
+    margin-left: -2rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-9"].has-gutter-xl > * {
+      width: calc(100% / 9 - 4rem - 0.01px);
+      margin-right: 2rem;
+      margin-left: 2rem; }
+  /* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-10"] > * {
+    width: calc(100% / 10 - 0.01px); }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-10"].has-gutter {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-10"].has-gutter > * {
+      width: calc(100% / 10 - 1rem - 0.01px);
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-10"].has-gutter-l {
+    margin-right: -1rem;
+    margin-left: -1rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-10"].has-gutter-l > * {
+      width: calc(100% / 10 - 2rem - 0.01px);
+      margin-right: 1rem;
+      margin-left: 1rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-10"].has-gutter-xl {
+    margin-right: -2rem;
+    margin-left: -2rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-10"].has-gutter-xl > * {
+      width: calc(100% / 10 - 4rem - 0.01px);
+      margin-right: 2rem;
+      margin-left: 2rem; }
+  /* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-11"] > * {
+    width: calc(100% / 11 - 0.01px); }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-11"].has-gutter {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-11"].has-gutter > * {
+      width: calc(100% / 11 - 1rem - 0.01px);
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-11"].has-gutter-l {
+    margin-right: -1rem;
+    margin-left: -1rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-11"].has-gutter-l > * {
+      width: calc(100% / 11 - 2rem - 0.01px);
+      margin-right: 1rem;
+      margin-left: 1rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-11"].has-gutter-xl {
+    margin-right: -2rem;
+    margin-left: -2rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-11"].has-gutter-xl > * {
+      width: calc(100% / 11 - 4rem - 0.01px);
+      margin-right: 2rem;
+      margin-left: 2rem; }
+  /* line 27, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-12"] > * {
+    width: calc(100% / 12 - 0.01px); }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-12"].has-gutter {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-12"].has-gutter > * {
+      width: calc(100% / 12 - 1rem - 0.01px);
+      margin-right: 0.5rem;
+      margin-left: 0.5rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-12"].has-gutter-l {
+    margin-right: -1rem;
+    margin-left: -1rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-12"].has-gutter-l > * {
+      width: calc(100% / 12 - 2rem - 0.01px);
+      margin-right: 1rem;
+      margin-left: 1rem; }
+  /* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="grid-12"].has-gutter-xl {
+    margin-right: -2rem;
+    margin-left: -2rem; }
+    /* line 35, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+    [class*="grid-12"].has-gutter-xl > * {
+      width: calc(100% / 12 - 4rem - 0.01px);
+      margin-right: 2rem;
+      margin-left: 2rem; } }
+
+/* line 82, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+.push {
+  margin-left: auto !important; }
+
+/* line 86, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+.pull {
+  margin-right: auto !important; }
+
+/* line 91, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+.item-first {
+  order: -1; }
+
+/* line 95, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+.item-last {
+  order: 1; }
+
+/* line 99, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+[class*="grid-"][class*="--reverse"] {
+  flex-direction: row-reverse; }
+
+@media (min-width: 544px) {
+  /* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .full {
+    flex: 0 0 auto;
+    width: calc(100% / 1 - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter > .full {
+    width: calc(100% / 1 - 1rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-l > .full {
+    width: calc(100% / 1 - 2rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-xl > .full {
+    width: calc(100% / 1 - 4rem - 0.01px); }
+  /* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .one-half {
+    flex: 0 0 auto;
+    width: calc(100% / 2 - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter > .one-half {
+    width: calc(100% / 2 - 1rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-l > .one-half {
+    width: calc(100% / 2 - 2rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-xl > .one-half {
+    width: calc(100% / 2 - 4rem - 0.01px); }
+  /* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .one-third {
+    flex: 0 0 auto;
+    width: calc(100% / 3 - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter > .one-third {
+    width: calc(100% / 3 - 1rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-l > .one-third {
+    width: calc(100% / 3 - 2rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-xl > .one-third {
+    width: calc(100% / 3 - 4rem - 0.01px); }
+  /* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .one-quarter {
+    flex: 0 0 auto;
+    width: calc(100% / 4 - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter > .one-quarter {
+    width: calc(100% / 4 - 1rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-l > .one-quarter {
+    width: calc(100% / 4 - 2rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-xl > .one-quarter {
+    width: calc(100% / 4 - 4rem - 0.01px); }
+  /* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .one-fifth {
+    flex: 0 0 auto;
+    width: calc(100% / 5 - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter > .one-fifth {
+    width: calc(100% / 5 - 1rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-l > .one-fifth {
+    width: calc(100% / 5 - 2rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-xl > .one-fifth {
+    width: calc(100% / 5 - 4rem - 0.01px); }
+  /* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .one-sixth {
+    flex: 0 0 auto;
+    width: calc(100% / 6 - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter > .one-sixth {
+    width: calc(100% / 6 - 1rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-l > .one-sixth {
+    width: calc(100% / 6 - 2rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-xl > .one-sixth {
+    width: calc(100% / 6 - 4rem - 0.01px); }
+  /* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .two-thirds {
+    flex: 0 0 auto;
+    width: calc(100% / 3 * 2 - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter > .two-thirds {
+    width: calc(100% / 3 * 2 - 1rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-l > .two-thirds {
+    width: calc(100% / 3 * 2 - 2rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-xl > .two-thirds {
+    width: calc(100% / 3 * 2 - 4rem - 0.01px); }
+  /* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .three-quarters {
+    flex: 0 0 auto;
+    width: calc(100% / 4 * 3 - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter > .three-quarters {
+    width: calc(100% / 4 * 3 - 1rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-l > .three-quarters {
+    width: calc(100% / 4 * 3 - 2rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-xl > .three-quarters {
+    width: calc(100% / 4 * 3 - 4rem - 0.01px); }
+  /* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .five-sixths {
+    flex: 0 0 auto;
+    width: calc(100% / 6 * 5 - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter > .five-sixths {
+    width: calc(100% / 6 * 5 - 1rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-l > .five-sixths {
+    width: calc(100% / 6 * 5 - 2rem - 0.01px); }
+  /* line 110, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  .has-gutter-xl > .five-sixths {
+    width: calc(100% / 6 * 5 - 4rem - 0.01px); } }
+
+/* Responsive Small Breakpoint */
+@media (min-width: 544px) and (max-width: 991px) {
+  /* line 122, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-1"] > * {
+    width: calc(100% / 1 - 0.01px); }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-1"].has-gutter > * {
+    width: calc(100% / 1 - 1rem - 0.01px); }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-1"].has-gutter-l > * {
+    width: calc(100% / 1 - 2rem - 0.01px); }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-1"].has-gutter-xl > * {
+    width: calc(100% / 1 - 4rem - 0.01px); }
+  /* line 122, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-2"] > * {
+    width: calc(100% / 2 - 0.01px); }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-2"].has-gutter > * {
+    width: calc(100% / 2 - 1rem - 0.01px); }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-2"].has-gutter-l > * {
+    width: calc(100% / 2 - 2rem - 0.01px); }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-2"].has-gutter-xl > * {
+    width: calc(100% / 2 - 4rem - 0.01px); }
+  /* line 122, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-3"] > * {
+    width: calc(100% / 3 - 0.01px); }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-3"].has-gutter > * {
+    width: calc(100% / 3 - 1rem - 0.01px); }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-3"].has-gutter-l > * {
+    width: calc(100% / 3 - 2rem - 0.01px); }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-3"].has-gutter-xl > * {
+    width: calc(100% / 3 - 4rem - 0.01px); }
+  /* line 122, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-4"] > * {
+    width: calc(100% / 4 - 0.01px); }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-4"].has-gutter > * {
+    width: calc(100% / 4 - 1rem - 0.01px); }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-4"].has-gutter-l > * {
+    width: calc(100% / 4 - 2rem - 0.01px); }
+  /* line 126, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/grids/_grillade.scss */
+  [class*="-small-4"].has-gutter-xl > * {
+    width: calc(100% / 4 - 4rem - 0.01px); } }
+
+/* ----------------------------- */
+/* ==Plugind                     */
+/* ----------------------------- */
+/* line 2, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+body.firefox .header:before {
+  content: "Hi, Firefox users!"; }
+
+/*---------------------------------------------------------------*/
+/* FormHack v1.2.0 (formhack.io) */
+/* Global Reset Styles ------------------ */
+/* line 69, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input,
+textarea,
+select,
+option,
+optgroup,
+button,
+legend,
+fieldset {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #282828;
+  vertical-align: top;
+  display: block;
+  margin: 10px 0; }
+
+/* line 90, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+datalist {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px; }
+
+/* line 95, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+label {
+  display: block;
+  margin: 10px 0; }
+
+/* Input & Textarea ------------------ */
+/* Fields with standard width */
+/* line 105, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #c8c8c8; }
+
+/* Fields with standard height */
+/* line 132, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list] {
+  height: 40px;
+  -webkit-appearance: none; }
+
+/* Other */
+/* line 152, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+textarea {
+  -webkit-appearance: none;
+  overflow: auto; }
+
+/* line 157, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type="range"] {
+  height: 40px;
+  width: 100%;
+  max-width: 400px; }
+
+/* line 163, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type="file"] {
+  min-height: 40px; }
+
+/* line 167, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type="search"] {
+  height: 40px;
+  -webkit-appearance: none; }
+
+/* line 171, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 176, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle; }
+
+/* Select ------------------ */
+/* line 190, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+select {
+  height: 40px; }
+
+/* line 204, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+select[multiple] {
+  height: auto;
+  min-height: 40px;
+  padding: 0; }
+  /* line 209, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+  select[multiple] option {
+    margin: 0;
+    padding: 8px; }
+
+/* Fieldset ------------------ */
+/* line 217, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+fieldset {
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: 1px solid #c8c8c8; }
+
+/* line 229, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+legend {
+  padding: 0 5px;
+  font-weight: 700; }
+
+/* Buttons, Input Type Submit/Reset ------------------ */
+/* line 242, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"] {
+  height: 40px;
+  width: 100%;
+  max-width: 200px;
+  background-color: gainsboro;
+  padding: 8px;
+  cursor: pointer;
+  color: #282828;
+  font-weight: 700;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 5px;
+  border: 1px solid #c8c8c8; }
+
+/* line 264, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type="image"] {
+  text-align: center;
+  padding: 8px; }
+
+/* States ------------------ */
+/* line 271, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[disabled],
+textarea[disabled],
+select[disabled],
+option[disabled],
+button[disabled] {
+  cursor: not-allowed; }
+
+/* line 279, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus {
+  background-color: gainsboro;
+  border-color: #c8c8c8; }
+
+/* line 288, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline: #c8c8c8 solid 2px; }
+
+/* line 293, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+  background-color: #c8c8c8;
+  color: #282828; }
+
+/*-------------------------------------------------------------------*/
+/* ----------------------------- */
+/* == Button 				     */
+/* ----------------------------- */
+/* line 318, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+.btn,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  background-color: #000;
+  border: 0.1rem solid #000;
+  border-radius: .4rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 3.8rem;
+  letter-spacing: .1rem;
+  line-height: 3.8rem;
+  padding: 0 3.0rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap; }
+  /* line 339, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+  .btn:focus, .btn:hover,
+  button:focus,
+  button:hover,
+  input[type='button']:focus,
+  input[type='button']:hover,
+  input[type='reset']:focus,
+  input[type='reset']:hover,
+  input[type='submit']:focus,
+  input[type='submit']:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+    outline: 0; }
+  /* line 347, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+  .btn[disabled],
+  button[disabled],
+  input[type='button'][disabled],
+  input[type='reset'][disabled],
+  input[type='submit'][disabled] {
+    cursor: default;
+    opacity: .5; }
+    /* line 350, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+    .btn[disabled]:focus, .btn[disabled]:hover,
+    button[disabled]:focus,
+    button[disabled]:hover,
+    input[type='button'][disabled]:focus,
+    input[type='button'][disabled]:hover,
+    input[type='reset'][disabled]:focus,
+    input[type='reset'][disabled]:hover,
+    input[type='submit'][disabled]:focus,
+    input[type='submit'][disabled]:hover {
+      background-color: #000;
+      border-color: #000; }
+  /* line 357, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+  .btn.button-outline,
+  button.button-outline,
+  input[type='button'].button-outline,
+  input[type='reset'].button-outline,
+  input[type='submit'].button-outline {
+    background-color: transparent;
+    color: #fff; }
+    /* line 360, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+    .btn.button-outline:focus, .btn.button-outline:hover,
+    button.button-outline:focus,
+    button.button-outline:hover,
+    input[type='button'].button-outline:focus,
+    input[type='button'].button-outline:hover,
+    input[type='reset'].button-outline:focus,
+    input[type='reset'].button-outline:hover,
+    input[type='submit'].button-outline:focus,
+    input[type='submit'].button-outline:hover {
+      background-color: transparent;
+      border-color: #333;
+      color: #333; }
+    /* line 367, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+    .btn.button-outline[disabled]:focus, .btn.button-outline[disabled]:hover,
+    button.button-outline[disabled]:focus,
+    button.button-outline[disabled]:hover,
+    input[type='button'].button-outline[disabled]:focus,
+    input[type='button'].button-outline[disabled]:hover,
+    input[type='reset'].button-outline[disabled]:focus,
+    input[type='reset'].button-outline[disabled]:hover,
+    input[type='submit'].button-outline[disabled]:focus,
+    input[type='submit'].button-outline[disabled]:hover {
+      border-color: inherit;
+      color: #fff; }
+  /* line 375, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+  .btn.button-clear,
+  button.button-clear,
+  input[type='button'].button-clear,
+  input[type='reset'].button-clear,
+  input[type='submit'].button-clear {
+    background-color: transparent;
+    border-color: transparent;
+    color: #fff; }
+    /* line 379, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+    .btn.button-clear:focus, .btn.button-clear:hover,
+    button.button-clear:focus,
+    button.button-clear:hover,
+    input[type='button'].button-clear:focus,
+    input[type='button'].button-clear:hover,
+    input[type='reset'].button-clear:focus,
+    input[type='reset'].button-clear:hover,
+    input[type='submit'].button-clear:focus,
+    input[type='submit'].button-clear:hover {
+      background-color: transparent;
+      border-color: transparent;
+      color: #333; }
+    /* line 386, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+    .btn.button-clear[disabled]:focus, .btn.button-clear[disabled]:hover,
+    button.button-clear[disabled]:focus,
+    button.button-clear[disabled]:hover,
+    input[type='button'].button-clear[disabled]:focus,
+    input[type='button'].button-clear[disabled]:hover,
+    input[type='reset'].button-clear[disabled]:focus,
+    input[type='reset'].button-clear[disabled]:hover,
+    input[type='submit'].button-clear[disabled]:focus,
+    input[type='submit'].button-clear[disabled]:hover {
+      color: #fff; }
+
+/* ----------------------------- */
+/* == Input 				     */
+/* ----------------------------- */
+/* line 403, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+input[type="date"],
+input[type="time"],
+input[type="week"],
+input[type="month"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+  appearance: none;
+  background-color: transparent;
+  border: 0.1rem solid #ddd;
+  border-radius: .4rem;
+  box-shadow: none;
+  height: 3.8rem;
+  padding: .6rem 1.0rem; }
+  /* line 426, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+  input[type='email']:focus,
+  input[type='number']:focus,
+  input[type='password']:focus,
+  input[type='search']:focus,
+  input[type='tel']:focus,
+  input[type='text']:focus,
+  input[type='url']:focus,
+  input[type="date"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="month"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="color"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #333;
+    outline: 0; }
+
+/* line 432, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+select {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#d1d1d1" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>') center right no-repeat;
+  padding-right: 3.0rem; }
+  /* line 435, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+  select:focus {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#9b4dca" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>'); }
+
+/* line 441, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type="color"] {
+  padding: 0.3rem; }
+
+/* line 446, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+textarea {
+  min-height: 6.5rem; }
+
+/* ----------------------------- */
+/* == input range    		     */
+/* ----------------------------- */
+/* line 454, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range] {
+  /*removes default webkit styles*/
+  -webkit-appearance: none;
+  /*fix for FF unable to apply focus style bug */
+  border: 1px solid white;
+  /*required for proper track sizing in FF*/
+  width: 300px; }
+
+/* line 464, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px; }
+
+/* line 471, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #333;
+  margin-top: -4px; }
+
+/* line 480, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]:focus {
+  outline: none; }
+
+/* line 483, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ccc; }
+
+/* line 487, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]::-moz-range-track {
+  width: 300px;
+  height: 5px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px; }
+
+/* line 494, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]::-moz-range-thumb {
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #333; }
+
+/*hide the outline behind the border*/
+/* line 503, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]:-moz-focusring {
+  outline: 1px solid white;
+  outline-offset: -1px; }
+
+/* line 508, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]::-ms-track {
+  width: 300px;
+  height: 5px;
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  background: transparent;
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 6px 0;
+  /*remove default tick marks*/
+  color: transparent; }
+
+/* line 522, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]::-ms-fill-lower {
+  background: #777;
+  border-radius: 10px; }
+
+/* line 526, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]::-ms-fill-upper {
+  background: #ddd;
+  border-radius: 10px; }
+
+/* line 530, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]::-ms-thumb {
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #333; }
+
+/* line 537, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]:focus::-ms-fill-lower {
+  background: #888; }
+
+/* line 540, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+input[type=range]:focus::-ms-fill-upper {
+  background: #ccc; }
+
+/* ----------------------------- */
+/* == radio, checkbox 		     */
+/* ----------------------------- */
+/* Cachons la case à cocher */
+/* line 552, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked,
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  left: -9999px; }
+
+/* on prépare le label */
+/* line 561, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label,
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative;
+  /* permet de positionner les pseudo-éléments */
+  padding-left: 25px;
+  /* fait un peu d'espace pour notre case à venir */
+  cursor: pointer;
+  /* affiche un curseur adapté */ }
+
+/* :before sert à créer la case à cocher */
+/* line 571, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  /* dim. de la case */
+  border: 1px solid #000;
+  background: #fff; }
+
+/* Aspect général de la coche */
+/* line 582, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: 0;
+  left: 4px;
+  font-size: 14px;
+  color: #000; }
+
+/* :before sert à créer la case à cocher */
+/* line 593, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  /* dim. de la case */
+  border: 1px solid #000;
+  background: #fff;
+  border-radius: 50%; }
+
+/* Aspect général de la coche */
+/* line 605, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border-radius: 50%; }
+
+/* Aspect si "pas cochée" */
+/* line 617, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+[type="checkbox"]:not(:checked) + label:after,
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  /* coche invisible */
+  transform: scale(0);
+  /* mise à l'échelle à 0 */ }
+
+/* Aspect si "cochée" */
+/* line 624, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+[type="checkbox"]:checked + label:after,
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  /* coche opaque */
+  transform: scale(1);
+  /* mise à l'échelle 1:1 */ }
+
+/* aspect désactivée */
+/* line 631, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before,
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
+  border-color: #000;
+  background-color: #fff; }
+
+/* styles de la coche (si cochée/désactivée) */
+/* line 640, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+[type="checkbox"]:disabled:checked + label:after,
+[type="radio"]:disabled:checked + label:after {
+  color: #999; }
+
+/* on style aussi le label quand désactivé */
+/* line 646, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+[type="checkbox"]:disabled + label,
+[type="radio"]:disabled + label {
+  color: #aaa; }
+
+/* aspect au focus de l'élément */
+/* line 652, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_forms.scss */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before,
+[type="radio"]:checked:focus + label:before,
+[type="radio"]:not(:checked):focus + label:before {
+  border: 1px solid #000; }
+
+/*
+liste effect:;
+bounce flash pulse rubberBand shake headShake swing tada wobble jello 
+bounceIn bounceInDown bounceInLeft bounceInRight bounceInUp 
+bounceOut bounceOutDown bounceOutLeft bounceOutRight bounceOutUp
+fadeIn fadeInDown fadeInDownBig fadeInLeft fadeInLeftBig fadeInRight fadeInRightBigfadeInUp fadeInUpBig 
+fadeOut fadeOutDown fadeOutDownBig fadeOutLeft fadeOutLeftBig fadeOutRight fadeOutRightBig fadeOutUp fadeOutUpBig
+flipInX flipInY flipOutX flipOutY 
+lightSpeedIn lightSpeedOut 
+rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut
+rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight
+hinge jackInTheBox rollIn rollOut
+zoomIn zoomInDown zoomInLeft zoomInRight zoomInUp
+zoomOut zoomOutDown zoomOutLeft zoomOutRight zoomOutUp
+slideInDown slideInLeft slideInRight slideInUp
+slideOutDown slideOutLeft slideOutRight slideOutUp
+
+exemple: <h1 class="animated infinite bounce">Example</h1>;
+*/
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2017 Daniel Eden
+ */
+/* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both; }
+
+/* line 36, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.animated.infinite {
+  animation-iteration-count: infinite; }
+
+/* line 40, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.animated.hinge {
+  animation-duration: 2s; }
+
+/* line 44, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: .75s; }
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0); }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0); }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0); }
+  90% {
+    transform: translate3d(0, -4px, 0); } }
+
+/* line 72, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom; }
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1; }
+  25%, 75% {
+    opacity: 0; } }
+
+/* line 87, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.flash {
+  animation-name: flash; }
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1); }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05); }
+  to {
+    transform: scale3d(1, 1, 1); } }
+
+/* line 107, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.pulse {
+  animation-name: pulse; }
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1); }
+  30% {
+    transform: scale3d(1.25, 0.75, 1); }
+  40% {
+    transform: scale3d(0.75, 1.25, 1); }
+  50% {
+    transform: scale3d(1.15, 0.85, 1); }
+  65% {
+    transform: scale3d(0.95, 1.05, 1); }
+  75% {
+    transform: scale3d(1.05, 0.95, 1); }
+  to {
+    transform: scale3d(1, 1, 1); } }
+
+/* line 141, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rubberBand {
+  animation-name: rubberBand; }
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0); }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0); } }
+
+/* line 159, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.shake {
+  animation-name: shake; }
+
+@keyframes headShake {
+  0% {
+    transform: translateX(0); }
+  6.5% {
+    transform: translateX(-6px) rotateY(-9deg); }
+  18.5% {
+    transform: translateX(5px) rotateY(7deg); }
+  31.5% {
+    transform: translateX(-3px) rotateY(-5deg); }
+  43.5% {
+    transform: translateX(2px) rotateY(3deg); }
+  50% {
+    transform: translateX(0); } }
+
+/* line 189, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.headShake {
+  animation-timing-function: ease-in-out;
+  animation-name: headShake; }
+
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg); }
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg); }
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg); }
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg); }
+  to {
+    transform: rotate3d(0, 0, 1, 0deg); } }
+
+/* line 216, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.swing {
+  transform-origin: top center;
+  animation-name: swing; }
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1); }
+  10%, 20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+  to {
+    transform: scale3d(1, 1, 1); } }
+
+/* line 243, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.tada {
+  animation-name: tada; }
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes wobble {
+  from {
+    transform: none; }
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg); }
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg); }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg); }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg); }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg); }
+  to {
+    transform: none; } }
+
+/* line 279, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.wobble {
+  animation-name: wobble; }
+
+@keyframes jello {
+  from, 11.1%, to {
+    transform: none; }
+  22.2% {
+    transform: skewX(-12.5deg) skewY(-12.5deg); }
+  33.3% {
+    transform: skewX(6.25deg) skewY(6.25deg); }
+  44.4% {
+    transform: skewX(-3.125deg) skewY(-3.125deg); }
+  55.5% {
+    transform: skewX(1.5625deg) skewY(1.5625deg); }
+  66.6% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg); }
+  77.7% {
+    transform: skewX(0.39062deg) skewY(0.39062deg); }
+  88.8% {
+    transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
+
+/* line 317, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.jello {
+  animation-name: jello;
+  transform-origin: center; }
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1); } }
+
+/* line 355, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.bounceIn {
+  animation-name: bounceIn; }
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0); }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0); }
+  75% {
+    transform: translate3d(0, -10px, 0); }
+  90% {
+    transform: translate3d(0, 5px, 0); }
+  to {
+    transform: none; } }
+
+/* line 387, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.bounceInDown {
+  animation-name: bounceInDown; }
+
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0); }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0); }
+  75% {
+    transform: translate3d(-10px, 0, 0); }
+  90% {
+    transform: translate3d(5px, 0, 0); }
+  to {
+    transform: none; } }
+
+/* line 419, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.bounceInLeft {
+  animation-name: bounceInLeft; }
+
+@keyframes bounceInRight {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0); }
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0); }
+  75% {
+    transform: translate3d(10px, 0, 0); }
+  90% {
+    transform: translate3d(-5px, 0, 0); }
+  to {
+    transform: none; } }
+
+/* line 451, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.bounceInRight {
+  animation-name: bounceInRight; }
+
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0); }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0); }
+  75% {
+    transform: translate3d(0, 10px, 0); }
+  90% {
+    transform: translate3d(0, -5px, 0); }
+  to {
+    transform: translate3d(0, 0, 0); } }
+
+/* line 483, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.bounceInUp {
+  animation-name: bounceInUp; }
+
+@keyframes bounceOut {
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+  50%, 55% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1); }
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); } }
+
+/* line 503, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.bounceOut {
+  animation-name: bounceOut; }
+
+@keyframes bounceOutDown {
+  20% {
+    transform: translate3d(0, 10px, 0); }
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0); }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0); } }
+
+/* line 523, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.bounceOutDown {
+  animation-name: bounceOutDown; }
+
+@keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    transform: translate3d(20px, 0, 0); }
+  to {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0); } }
+
+/* line 539, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.bounceOutLeft {
+  animation-name: bounceOutLeft; }
+
+@keyframes bounceOutRight {
+  20% {
+    opacity: 1;
+    transform: translate3d(-20px, 0, 0); }
+  to {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0); } }
+
+/* line 555, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.bounceOutRight {
+  animation-name: bounceOutRight; }
+
+@keyframes bounceOutUp {
+  20% {
+    transform: translate3d(0, -10px, 0); }
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, 20px, 0); }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0); } }
+
+/* line 575, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.bounceOutUp {
+  animation-name: bounceOutUp; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* line 589, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeIn {
+  animation-name: fadeIn; }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+/* line 605, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeInDown {
+  animation-name: fadeInDown; }
+
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+/* line 621, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeInDownBig {
+  animation-name: fadeInDownBig; }
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+/* line 637, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeInLeft {
+  animation-name: fadeInLeft; }
+
+@keyframes fadeInLeftBig {
+  from {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+/* line 653, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeInLeftBig {
+  animation-name: fadeInLeftBig; }
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+/* line 669, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeInRight {
+  animation-name: fadeInRight; }
+
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+/* line 685, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeInRightBig {
+  animation-name: fadeInRightBig; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+/* line 701, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeInUp {
+  animation-name: fadeInUp; }
+
+@keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+/* line 717, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeInUpBig {
+  animation-name: fadeInUpBig; }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+/* line 731, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeOut {
+  animation-name: fadeOut; }
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); } }
+
+/* line 746, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeOutDown {
+  animation-name: fadeOutDown; }
+
+@keyframes fadeOutDownBig {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0); } }
+
+/* line 761, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeOutDownBig {
+  animation-name: fadeOutDownBig; }
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); } }
+
+/* line 776, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeOutLeft {
+  animation-name: fadeOutLeft; }
+
+@keyframes fadeOutLeftBig {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0); } }
+
+/* line 791, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeOutLeftBig {
+  animation-name: fadeOutLeftBig; }
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0); } }
+
+/* line 806, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeOutRight {
+  animation-name: fadeOutRight; }
+
+@keyframes fadeOutRightBig {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0); } }
+
+/* line 821, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeOutRightBig {
+  animation-name: fadeOutRightBig; }
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); } }
+
+/* line 836, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeOutUp {
+  animation-name: fadeOutUp; }
+
+@keyframes fadeOutUpBig {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0); } }
+
+/* line 851, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.fadeOutUpBig {
+  animation-name: fadeOutUpBig; }
+
+@keyframes flip {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out; }
+  40% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out; }
+  50% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in; }
+  80% {
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95);
+    animation-timing-function: ease-in; }
+  to {
+    transform: perspective(400px);
+    animation-timing-function: ease-in; } }
+
+/* line 882, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.animated.flip {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  animation-name: flip; }
+
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0; }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in; }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  to {
+    transform: perspective(400px); } }
+
+/* line 914, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.flipInX {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-name: flipInX; }
+
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0; }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in; }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1; }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg); }
+  to {
+    transform: perspective(400px); } }
+
+/* line 946, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-name: flipInY; }
+
+@keyframes flipOutX {
+  from {
+    transform: perspective(400px); }
+  30% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1; }
+  to {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0; } }
+
+/* line 968, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.flipOutX {
+  animation-name: flipOutX;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important; }
+
+@keyframes flipOutY {
+  from {
+    transform: perspective(400px); }
+  30% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1; }
+  to {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0; } }
+
+/* line 990, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.flipOutY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-name: flipOutY; }
+
+@keyframes lightSpeedIn {
+  from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0; }
+  60% {
+    transform: skewX(20deg);
+    opacity: 1; }
+  80% {
+    transform: skewX(-5deg);
+    opacity: 1; }
+  to {
+    transform: none;
+    opacity: 1; } }
+
+/* line 1018, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.lightSpeedIn {
+  animation-name: lightSpeedIn;
+  animation-timing-function: ease-out; }
+
+@keyframes lightSpeedOut {
+  from {
+    opacity: 1; }
+  to {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0; } }
+
+/* line 1034, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.lightSpeedOut {
+  animation-name: lightSpeedOut;
+  animation-timing-function: ease-in; }
+
+@keyframes rotateIn {
+  from {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0; }
+  to {
+    transform-origin: center;
+    transform: none;
+    opacity: 1; } }
+
+/* line 1053, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rotateIn {
+  animation-name: rotateIn; }
+
+@keyframes rotateInDownLeft {
+  from {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; }
+  to {
+    transform-origin: left bottom;
+    transform: none;
+    opacity: 1; } }
+
+/* line 1071, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rotateInDownLeft {
+  animation-name: rotateInDownLeft; }
+
+@keyframes rotateInDownRight {
+  from {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0; }
+  to {
+    transform-origin: right bottom;
+    transform: none;
+    opacity: 1; } }
+
+/* line 1089, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rotateInDownRight {
+  animation-name: rotateInDownRight; }
+
+@keyframes rotateInUpLeft {
+  from {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0; }
+  to {
+    transform-origin: left bottom;
+    transform: none;
+    opacity: 1; } }
+
+/* line 1107, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rotateInUpLeft {
+  animation-name: rotateInUpLeft; }
+
+@keyframes rotateInUpRight {
+  from {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0; }
+  to {
+    transform-origin: right bottom;
+    transform: none;
+    opacity: 1; } }
+
+/* line 1125, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rotateInUpRight {
+  animation-name: rotateInUpRight; }
+
+@keyframes rotateOut {
+  from {
+    transform-origin: center;
+    opacity: 1; }
+  to {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0; } }
+
+/* line 1142, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rotateOut {
+  animation-name: rotateOut; }
+
+@keyframes rotateOutDownLeft {
+  from {
+    transform-origin: left bottom;
+    opacity: 1; }
+  to {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0; } }
+
+/* line 1159, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rotateOutDownLeft {
+  animation-name: rotateOutDownLeft; }
+
+@keyframes rotateOutDownRight {
+  from {
+    transform-origin: right bottom;
+    opacity: 1; }
+  to {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; } }
+
+/* line 1176, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rotateOutDownRight {
+  animation-name: rotateOutDownRight; }
+
+@keyframes rotateOutUpLeft {
+  from {
+    transform-origin: left bottom;
+    opacity: 1; }
+  to {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0; } }
+
+/* line 1193, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rotateOutUpLeft {
+  animation-name: rotateOutUpLeft; }
+
+@keyframes rotateOutUpRight {
+  from {
+    transform-origin: right bottom;
+    opacity: 1; }
+  to {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 0; } }
+
+/* line 1210, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rotateOutUpRight {
+  animation-name: rotateOutUpRight; }
+
+@keyframes hinge {
+  0% {
+    transform-origin: top left;
+    animation-timing-function: ease-in-out; }
+  20%, 60% {
+    transform: rotate3d(0, 0, 1, 80deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out; }
+  40%, 80% {
+    transform: rotate3d(0, 0, 1, 60deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+    opacity: 1; }
+  to {
+    transform: translate3d(0, 700px, 0);
+    opacity: 0; } }
+
+/* line 1239, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.hinge {
+  animation-name: hinge; }
+
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom; }
+  50% {
+    transform: rotate(-10deg); }
+  70% {
+    transform: rotate(3deg); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+/* line 1264, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.jackInTheBox {
+  animation-name: jackInTheBox; }
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes rollIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg); }
+  to {
+    opacity: 1;
+    transform: none; } }
+
+/* line 1282, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rollIn {
+  animation-name: rollIn; }
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes rollOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg); } }
+
+/* line 1299, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.rollOut {
+  animation-name: rollOut; }
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+
+/* line 1314, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.zoomIn {
+  animation-name: zoomIn; }
+
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+/* line 1332, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.zoomInDown {
+  animation-name: zoomInDown; }
+
+@keyframes zoomInLeft {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+/* line 1350, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.zoomInLeft {
+  animation-name: zoomInLeft; }
+
+@keyframes zoomInRight {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+/* line 1368, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.zoomInRight {
+  animation-name: zoomInRight; }
+
+@keyframes zoomInUp {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+/* line 1386, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.zoomInUp {
+  animation-name: zoomInUp; }
+
+@keyframes zoomOut {
+  from {
+    opacity: 1; }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  to {
+    opacity: 0; } }
+
+/* line 1405, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.zoomOut {
+  animation-name: zoomOut; }
+
+@keyframes zoomOutDown {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  to {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    transform-origin: center bottom;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+/* line 1424, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.zoomOutDown {
+  animation-name: zoomOutDown; }
+
+@keyframes zoomOutLeft {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(42px, 0, 0); }
+  to {
+    opacity: 0;
+    transform: scale(0.1) translate3d(-2000px, 0, 0);
+    transform-origin: left center; } }
+
+/* line 1441, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.zoomOutLeft {
+  animation-name: zoomOutLeft; }
+
+@keyframes zoomOutRight {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0, 0); }
+  to {
+    opacity: 0;
+    transform: scale(0.1) translate3d(2000px, 0, 0);
+    transform-origin: right center; } }
+
+/* line 1458, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.zoomOutRight {
+  animation-name: zoomOutRight; }
+
+@keyframes zoomOutUp {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  to {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+    transform-origin: center bottom;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
+/* line 1477, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.zoomOutUp {
+  animation-name: zoomOutUp; }
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+
+/* line 1492, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.slideInDown {
+  animation-name: slideInDown; }
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+
+/* line 1507, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.slideInLeft {
+  animation-name: slideInLeft; }
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+
+/* line 1522, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.slideInRight {
+  animation-name: slideInRight; }
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+
+/* line 1537, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.slideInUp {
+  animation-name: slideInUp; }
+
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0); } }
+
+/* line 1552, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.slideOutDown {
+  animation-name: slideOutDown; }
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0); } }
+
+/* line 1567, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.slideOutLeft {
+  animation-name: slideOutLeft; }
+
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0); } }
+
+/* line 1582, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.slideOutRight {
+  animation-name: slideOutRight; }
+
+@keyframes slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0); } }
+
+/* line 1597, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+.slideOutUp {
+  animation-name: slideOutUp; }
+
+/* ----------------------------- */
+/* ==Own stylesheet              */
+/* ----------------------------- */
+/* Here should go your own CSS styles */
+
+/*# sourceMappingURL=style.css.map */
