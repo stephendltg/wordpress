@@ -6,6 +6,20 @@
  */
 
 
+if ( ! function_exists( 'mp_brackets' ) ) :
+
+
+function _echo( $var, $var_dump = 0 ){
+
+    if (!WP_DEBUG) return null;
+
+    echo '<pre>';
+    if($var_dump) var_dump($var);
+    else print_r($var);
+    echo '<pre>';
+
+}
+
 /*
     var :           {{ma_variable}}
     commentaire:    {{! mon  commentaire }}
@@ -16,10 +30,10 @@
 */
 
 function mp_brackets( $string , $args = array() , $partials = array() ){
-
+    
     $p_args   = $args;
-    $args     = parse_args( $args );
-    $partials = array_filter( parse_args( $partials ) );
+    $args     = wp_parse_args( $args );
+    $partials = array_filter( wp_parse_args( $partials ) );
     $vars     = array();
 
     // init table des boucles
@@ -99,3 +113,4 @@ function mp_brackets( $string , $args = array() , $partials = array() ){
 
     return trim($string);
 }
+endif;

@@ -3144,7 +3144,9 @@ input[type=range]:focus::-ms-fill-upper {
   border: 1px solid #000; }
 
 /*
-liste effect:;
+liste effect:
+============
+
 bounce flash pulse rubberBand shake headShake swing tada wobble jello 
 bounceIn bounceInDown bounceInLeft bounceInRight bounceInUp 
 bounceOut bounceOutDown bounceOutLeft bounceOutRight bounceOutUp
@@ -3169,20 +3171,20 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
  *
  * Copyright (c) 2017 Daniel Eden
  */
-/* line 31, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 33, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both; }
 
-/* line 36, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 38, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .animated.infinite {
   animation-iteration-count: infinite; }
 
-/* line 40, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 42, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .animated.hinge {
   animation-duration: 2s; }
 
-/* line 44, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 46, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .animated.flipOutX,
 .animated.flipOutY,
 .animated.bounceIn,
@@ -3202,7 +3204,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   90% {
     transform: translate3d(0, -4px, 0); } }
 
-/* line 72, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 74, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .bounce {
   animation-name: bounce;
   transform-origin: center bottom; }
@@ -3213,7 +3215,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   25%, 75% {
     opacity: 0; } }
 
-/* line 87, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 89, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .flash {
   animation-name: flash; }
 
@@ -3226,7 +3228,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: scale3d(1, 1, 1); } }
 
-/* line 107, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 109, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .pulse {
   animation-name: pulse; }
 
@@ -3246,7 +3248,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: scale3d(1, 1, 1); } }
 
-/* line 141, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 143, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rubberBand {
   animation-name: rubberBand; }
 
@@ -3258,7 +3260,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   20%, 40%, 60%, 80% {
     transform: translate3d(10px, 0, 0); } }
 
-/* line 159, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 161, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .shake {
   animation-name: shake; }
 
@@ -3276,7 +3278,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   50% {
     transform: translateX(0); } }
 
-/* line 189, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 191, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .headShake {
   animation-timing-function: ease-in-out;
   animation-name: headShake; }
@@ -3293,7 +3295,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: rotate3d(0, 0, 1, 0deg); } }
 
-/* line 216, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 218, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .swing {
   transform-origin: top center;
   animation-name: swing; }
@@ -3310,7 +3312,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: scale3d(1, 1, 1); } }
 
-/* line 243, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 245, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .tada {
   animation-name: tada; }
 
@@ -3331,7 +3333,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: none; } }
 
-/* line 279, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 281, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .wobble {
   animation-name: wobble; }
 
@@ -3353,7 +3355,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   88.8% {
     transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
 
-/* line 317, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 319, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .jello {
   animation-name: jello;
   transform-origin: center; }
@@ -3377,7 +3379,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 1;
     transform: scale3d(1, 1, 1); } }
 
-/* line 355, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 357, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .bounceIn {
   animation-name: bounceIn; }
 
@@ -3397,7 +3399,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: none; } }
 
-/* line 387, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 389, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .bounceInDown {
   animation-name: bounceInDown; }
 
@@ -3417,7 +3419,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: none; } }
 
-/* line 419, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 421, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .bounceInLeft {
   animation-name: bounceInLeft; }
 
@@ -3437,7 +3439,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: none; } }
 
-/* line 451, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 453, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .bounceInRight {
   animation-name: bounceInRight; }
 
@@ -3457,7 +3459,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: translate3d(0, 0, 0); } }
 
-/* line 483, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 485, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .bounceInUp {
   animation-name: bounceInUp; }
 
@@ -3471,7 +3473,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: scale3d(0.3, 0.3, 0.3); } }
 
-/* line 503, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 505, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .bounceOut {
   animation-name: bounceOut; }
 
@@ -3485,7 +3487,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(0, 2000px, 0); } }
 
-/* line 523, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 525, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .bounceOutDown {
   animation-name: bounceOutDown; }
 
@@ -3497,7 +3499,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(-2000px, 0, 0); } }
 
-/* line 539, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 541, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .bounceOutLeft {
   animation-name: bounceOutLeft; }
 
@@ -3509,7 +3511,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(2000px, 0, 0); } }
 
-/* line 555, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 557, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .bounceOutRight {
   animation-name: bounceOutRight; }
 
@@ -3523,7 +3525,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(0, -2000px, 0); } }
 
-/* line 575, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 577, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .bounceOutUp {
   animation-name: bounceOutUp; }
 
@@ -3533,7 +3535,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     opacity: 1; } }
 
-/* line 589, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 591, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeIn {
   animation-name: fadeIn; }
 
@@ -3545,7 +3547,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 1;
     transform: none; } }
 
-/* line 605, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 607, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeInDown {
   animation-name: fadeInDown; }
 
@@ -3557,7 +3559,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 1;
     transform: none; } }
 
-/* line 621, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 623, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeInDownBig {
   animation-name: fadeInDownBig; }
 
@@ -3569,7 +3571,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 1;
     transform: none; } }
 
-/* line 637, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 639, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeInLeft {
   animation-name: fadeInLeft; }
 
@@ -3581,7 +3583,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 1;
     transform: none; } }
 
-/* line 653, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 655, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeInLeftBig {
   animation-name: fadeInLeftBig; }
 
@@ -3593,7 +3595,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 1;
     transform: none; } }
 
-/* line 669, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 671, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeInRight {
   animation-name: fadeInRight; }
 
@@ -3605,7 +3607,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 1;
     transform: none; } }
 
-/* line 685, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 687, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeInRightBig {
   animation-name: fadeInRightBig; }
 
@@ -3617,7 +3619,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 1;
     transform: none; } }
 
-/* line 701, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 703, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeInUp {
   animation-name: fadeInUp; }
 
@@ -3629,7 +3631,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 1;
     transform: none; } }
 
-/* line 717, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 719, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeInUpBig {
   animation-name: fadeInUpBig; }
 
@@ -3639,7 +3641,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     opacity: 0; } }
 
-/* line 731, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 733, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeOut {
   animation-name: fadeOut; }
 
@@ -3650,7 +3652,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(0, 100%, 0); } }
 
-/* line 746, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 748, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeOutDown {
   animation-name: fadeOutDown; }
 
@@ -3661,7 +3663,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(0, 2000px, 0); } }
 
-/* line 761, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 763, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeOutDownBig {
   animation-name: fadeOutDownBig; }
 
@@ -3672,7 +3674,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(-100%, 0, 0); } }
 
-/* line 776, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 778, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeOutLeft {
   animation-name: fadeOutLeft; }
 
@@ -3683,7 +3685,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(-2000px, 0, 0); } }
 
-/* line 791, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 793, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeOutLeftBig {
   animation-name: fadeOutLeftBig; }
 
@@ -3694,7 +3696,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(100%, 0, 0); } }
 
-/* line 806, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 808, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeOutRight {
   animation-name: fadeOutRight; }
 
@@ -3705,7 +3707,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(2000px, 0, 0); } }
 
-/* line 821, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 823, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeOutRightBig {
   animation-name: fadeOutRightBig; }
 
@@ -3716,7 +3718,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(0, -100%, 0); } }
 
-/* line 836, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 838, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeOutUp {
   animation-name: fadeOutUp; }
 
@@ -3727,7 +3729,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(0, -2000px, 0); } }
 
-/* line 851, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 853, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .fadeOutUpBig {
   animation-name: fadeOutUpBig; }
 
@@ -3748,7 +3750,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: perspective(400px);
     animation-timing-function: ease-in; } }
 
-/* line 882, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 884, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .animated.flip {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
@@ -3770,7 +3772,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: perspective(400px); } }
 
-/* line 914, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 916, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .flipInX {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
@@ -3792,7 +3794,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: perspective(400px); } }
 
-/* line 946, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 948, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .flipInY {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
@@ -3808,7 +3810,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     opacity: 0; } }
 
-/* line 968, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 970, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .flipOutX {
   animation-name: flipOutX;
   -webkit-backface-visibility: visible !important;
@@ -3824,7 +3826,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
     opacity: 0; } }
 
-/* line 990, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 992, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .flipOutY {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
@@ -3844,7 +3846,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: none;
     opacity: 1; } }
 
-/* line 1018, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1020, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .lightSpeedIn {
   animation-name: lightSpeedIn;
   animation-timing-function: ease-out; }
@@ -3856,7 +3858,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: translate3d(100%, 0, 0) skewX(30deg);
     opacity: 0; } }
 
-/* line 1034, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1036, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .lightSpeedOut {
   animation-name: lightSpeedOut;
   animation-timing-function: ease-in; }
@@ -3871,7 +3873,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: none;
     opacity: 1; } }
 
-/* line 1053, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1055, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rotateIn {
   animation-name: rotateIn; }
 
@@ -3885,7 +3887,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: none;
     opacity: 1; } }
 
-/* line 1071, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1073, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rotateInDownLeft {
   animation-name: rotateInDownLeft; }
 
@@ -3899,7 +3901,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: none;
     opacity: 1; } }
 
-/* line 1089, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1091, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rotateInDownRight {
   animation-name: rotateInDownRight; }
 
@@ -3913,7 +3915,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: none;
     opacity: 1; } }
 
-/* line 1107, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1109, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rotateInUpLeft {
   animation-name: rotateInUpLeft; }
 
@@ -3927,7 +3929,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: none;
     opacity: 1; } }
 
-/* line 1125, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1127, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rotateInUpRight {
   animation-name: rotateInUpRight; }
 
@@ -3940,7 +3942,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: rotate3d(0, 0, 1, 200deg);
     opacity: 0; } }
 
-/* line 1142, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1144, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rotateOut {
   animation-name: rotateOut; }
 
@@ -3953,7 +3955,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: rotate3d(0, 0, 1, 45deg);
     opacity: 0; } }
 
-/* line 1159, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1161, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rotateOutDownLeft {
   animation-name: rotateOutDownLeft; }
 
@@ -3966,7 +3968,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: rotate3d(0, 0, 1, -45deg);
     opacity: 0; } }
 
-/* line 1176, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1178, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rotateOutDownRight {
   animation-name: rotateOutDownRight; }
 
@@ -3979,7 +3981,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: rotate3d(0, 0, 1, -45deg);
     opacity: 0; } }
 
-/* line 1193, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1195, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rotateOutUpLeft {
   animation-name: rotateOutUpLeft; }
 
@@ -3992,7 +3994,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: rotate3d(0, 0, 1, 90deg);
     opacity: 0; } }
 
-/* line 1210, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1212, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rotateOutUpRight {
   animation-name: rotateOutUpRight; }
 
@@ -4013,7 +4015,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: translate3d(0, 700px, 0);
     opacity: 0; } }
 
-/* line 1239, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1241, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .hinge {
   animation-name: hinge; }
 
@@ -4030,7 +4032,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 1;
     transform: scale(1); } }
 
-/* line 1264, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1266, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .jackInTheBox {
   animation-name: jackInTheBox; }
 
@@ -4043,7 +4045,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 1;
     transform: none; } }
 
-/* line 1282, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1284, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rollIn {
   animation-name: rollIn; }
 
@@ -4055,7 +4057,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     opacity: 0;
     transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg); } }
 
-/* line 1299, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1301, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .rollOut {
   animation-name: rollOut; }
 
@@ -4066,7 +4068,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   50% {
     opacity: 1; } }
 
-/* line 1314, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1316, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .zoomIn {
   animation-name: zoomIn; }
 
@@ -4080,7 +4082,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
 
-/* line 1332, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1334, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .zoomInDown {
   animation-name: zoomInDown; }
 
@@ -4094,7 +4096,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
 
-/* line 1350, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1352, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .zoomInLeft {
   animation-name: zoomInLeft; }
 
@@ -4108,7 +4110,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
 
-/* line 1368, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1370, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .zoomInRight {
   animation-name: zoomInRight; }
 
@@ -4122,7 +4124,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
 
-/* line 1386, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1388, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .zoomInUp {
   animation-name: zoomInUp; }
 
@@ -4135,7 +4137,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     opacity: 0; } }
 
-/* line 1405, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1407, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .zoomOut {
   animation-name: zoomOut; }
 
@@ -4150,7 +4152,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform-origin: center bottom;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
 
-/* line 1424, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1426, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .zoomOutDown {
   animation-name: zoomOutDown; }
 
@@ -4163,7 +4165,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: scale(0.1) translate3d(-2000px, 0, 0);
     transform-origin: left center; } }
 
-/* line 1441, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1443, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .zoomOutLeft {
   animation-name: zoomOutLeft; }
 
@@ -4176,7 +4178,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform: scale(0.1) translate3d(2000px, 0, 0);
     transform-origin: right center; } }
 
-/* line 1458, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1460, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .zoomOutRight {
   animation-name: zoomOutRight; }
 
@@ -4191,7 +4193,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     transform-origin: center bottom;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
 
-/* line 1477, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1479, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .zoomOutUp {
   animation-name: zoomOutUp; }
 
@@ -4202,7 +4204,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: translate3d(0, 0, 0); } }
 
-/* line 1492, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1494, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .slideInDown {
   animation-name: slideInDown; }
 
@@ -4213,7 +4215,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: translate3d(0, 0, 0); } }
 
-/* line 1507, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1509, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .slideInLeft {
   animation-name: slideInLeft; }
 
@@ -4224,7 +4226,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: translate3d(0, 0, 0); } }
 
-/* line 1522, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1524, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .slideInRight {
   animation-name: slideInRight; }
 
@@ -4235,7 +4237,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
   to {
     transform: translate3d(0, 0, 0); } }
 
-/* line 1537, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1539, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .slideInUp {
   animation-name: slideInUp; }
 
@@ -4246,7 +4248,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     visibility: hidden;
     transform: translate3d(0, 100%, 0); } }
 
-/* line 1552, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1554, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .slideOutDown {
   animation-name: slideOutDown; }
 
@@ -4257,7 +4259,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     visibility: hidden;
     transform: translate3d(-100%, 0, 0); } }
 
-/* line 1567, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1569, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .slideOutLeft {
   animation-name: slideOutLeft; }
 
@@ -4268,7 +4270,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     visibility: hidden;
     transform: translate3d(100%, 0, 0); } }
 
-/* line 1582, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1584, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .slideOutRight {
   animation-name: slideOutRight; }
 
@@ -4279,7 +4281,7 @@ exemple: <h1 class="animated infinite bounce">Example</h1>;
     visibility: hidden;
     transform: translate3d(0, -100%, 0); } }
 
-/* line 1597, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
+/* line 1599, /Users/Sites/www/wordpress/wp-content/themes/stephendltg/sass/plugins/_animate.scss */
 .slideOutUp {
   animation-name: slideOutUp; }
 
