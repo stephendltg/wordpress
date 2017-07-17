@@ -31,17 +31,6 @@ add_brackets( 'nav_menu'           , wp_nav_menu(
 );
 
 
-
-
-/*
- * Brackets - Template - header
- */
-add_partials('get_header', get_template_brackets('header') );
-
-
-
-
-
 /*
  * Brackets - Arguments - footer
  */
@@ -52,40 +41,38 @@ add_brackets( 'theme'           , 'stephendltg' );
 add_brackets( 'designer' , '<a href="http://stephendeletang.alwaysdata.net/">stephen deletang</a>' );
 
 
-
-/*
- * Brackets - Template - footer
- */
-add_partials( 'get_footer', get_template_brackets('footer') );
-
-
-
-
 /*
  * Brackets - Arguments - 404
  */
+
 $archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'stephendltg' ), convert_smilies( ':)' ) ) . '</p>';
 
-$args = array(
+$args =  array(
 
-    'get_search_form'       => get_search_form( false ),
-    'Widget_Recent_Posts'   => ob_get_func('the_widget', 'WP_Widget_Recent_Posts' ),
-    'list_categories'       => wp_list_categories( 
-                                array(
-    								'orderby'    => 'count',
-    								'order'      => 'DESC',
-    								'show_count' => 1,
-    								'title_li'   => '',
-    								'number'     => 10,
-                                    'echo'       => 0
-							     ) ),
-    'Widget_Archives'       => ob_get_func('the_widget', 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" ),
-    'Widget_Tag_Cloud'      => ob_get_func('the_widget', 'WP_Widget_Tag_Cloud' ),
+	'get_search_form'       => get_search_form( false ),
+	'Widget_Recent_Posts'   => ob_get_func('the_widget', 'WP_Widget_Recent_Posts' ),
+	'list_categories'       => wp_list_categories( 
+	                            array(
+	    							'orderby'    => 'count',
+	    							'order'      => 'DESC',
+	    							'show_count' => 1,
+	    							'title_li'   => '',
+	    							'number'     => 10,
+	                                'echo'       => 0
+								) ),
+	'Widget_Archives'       => ob_get_func('the_widget', 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" ),
+	'Widget_Tag_Cloud'      => ob_get_func('the_widget', 'WP_Widget_Tag_Cloud' ),
 );
 
-
+/*
+ * Brackets - Partials
+ */
+$partials= array(
+	'get_header' => get_template_brackets('header'),
+	'get_footer' => get_template_brackets('footer')
+	);
 
  /*
  * Brackets - Renderer
  */
-get_brackets( get_template_brackets('404'), $args );
+get_brackets( get_template_brackets('404'), $args, $partials );

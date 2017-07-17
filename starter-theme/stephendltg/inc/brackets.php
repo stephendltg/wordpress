@@ -84,19 +84,26 @@ endif;
 
 /**
  * transient data
+ *
+ * @param  string $transient     Nom du transient
+ * @param  string $function      Nom de la fonction qui recupère la valeur du transient
+ * @param  int    $expiration    Temps d'expiration du transient. ( 0 jamais expirer ) 
+ *
+ * @return            Valeur du transient
  */
 if ( ! function_exists( 'mp_transient_data' ) ) :
 
-function mp_transient_data( $transient , $function, $expiration = 60 ){
+function mp_transient_data( $transient , $function, $expiration = 0 ){
 
     $transient  = (string) $transient;
+    $function   = (string) $function;
     $expiration = (int) $expiration;   
 
-    if ( false === ( $transient = get_transient( $name ) ) ) {
-        set_transient( $name, call_user_func($function), $time );
-        $transient = get_transient( $name );
+    if ( false === ( $value = get_transient( $transient ) ) ) {
+        set_transient( $transient, call_user_func($function), $expiration );
+        $value = get_transient( $transient );
     }
-    return $transient; 
+    return $value; 
 }
 endif;
 
@@ -149,25 +156,6 @@ function add_brackets( $key , $value ) {
 
 
 /**
- * Ajouter partials
- *
- * @param (string)     $key clé d'identification du brackets. 
- * @param (everything) $value valeur de la clé. (si valeur null non prit en compte par le parser.)
- *
- * @return
- */
-function add_partials( $key , $value ) {
-
-    if( !is_array($key) )
-        $key = array( $key => $value );
-
-    if( null === mp_cache_data( 'partials') )
-        mp_cache_data( 'partials', $key );
-    else
-        mp_cache_data( 'partials', array_merge( mp_cache_data( 'partials') , $key ) );
-}
-
-/**
  * display brackets
  * @return echo
  */
@@ -197,15 +185,8 @@ function get_brackets( $string, $args = array(), $partials = array() ){
 */
 function brackets( $string , $args = array() , $partials = array()  ){
 
-    // On evite une boucle infini lors du parsage des partials
-    static $i = false;
-
-    if( !$i ){
-
-        $args     = wp_parse_args( $args, mp_cache_data('brackets') );
-        $partials = array_filter( wp_parse_args( $partials, mp_cache_data('partials') ) );
-        $i = true;
-    }
+    $args     = wp_parse_args( $args, mp_cache_data('brackets') );
+    $partials = array_filter( wp_parse_args( $partials ) );
 
     // On init table des variables
     $vars = array();
@@ -235,7 +216,6 @@ function brackets( $string , $args = array() , $partials = array()  ){
     // on filtre les valeurs ( null, '', false ) des arguments
     $vars = array_filter($vars);
     $args = array_filter($args);
-    
 
     // On scrute les boucles foreach
     foreach ( $args as $key => $value) {
