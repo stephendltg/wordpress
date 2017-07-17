@@ -199,16 +199,16 @@ function brackets( $string , $args = array() , $partials = array()  ){
 
     // On evite une boucle infini lors du parsage des partials
     static $i = false;
+
     if( !$i ){
+
         $args     = wp_parse_args( $args, mp_cache_data('brackets') );
-        $partials = array_filter( wp_parse_args( $partials ), mp_cache_data('partials') );
+        $partials = array_filter( wp_parse_args( $partials, mp_cache_data('partials') ) );
         $i = true;
     }
 
-    // init table des variables
-    $vars       = array();
-    // init table des boucles
-    $args_array = array();
+    // On init table des variables
+    $vars = array();
 
     // On prépare la table des boucles ainsi que celle des variables
     foreach ($args as $key => $value) {
@@ -235,6 +235,7 @@ function brackets( $string , $args = array() , $partials = array()  ){
     // on filtre les valeurs ( null, '', false ) des arguments
     $vars = array_filter($vars);
     $args = array_filter($args);
+    
 
     // On scrute les boucles foreach
     foreach ( $args as $key => $value) {

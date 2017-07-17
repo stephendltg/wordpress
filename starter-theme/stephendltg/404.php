@@ -49,14 +49,14 @@ add_brackets( 'wp_footer'       , ob_get_func('wp_footer') );
 add_brackets( 'developper-link' , esc_url( __( 'https://wordpress.org/', 'stephendltg' ) ) );
 add_brackets( 'developper'      , 'WordPress' );
 add_brackets( 'theme'           , 'stephendltg' );
-add_brackets( 'designer'        , '<a href="http://stephendeletang.alwaysdata.net/">stephen deletang</a>' );
+add_brackets( 'designer' , '<a href="http://stephendeletang.alwaysdata.net/">stephen deletang</a>' );
 
 
 
 /*
  * Brackets - Template - footer
  */
-add_partials('get_footer' => get_template_brackets('footer') );
+add_partials( 'get_footer', get_template_brackets('footer') );
 
 
 
