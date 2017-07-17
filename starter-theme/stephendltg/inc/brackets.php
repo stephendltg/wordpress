@@ -149,6 +149,25 @@ function add_brackets( $key , $value ) {
 
 
 /**
+ * Ajouter partials
+ *
+ * @param (string)     $key clé d'identification du brackets. 
+ * @param (everything) $value valeur de la clé. (si valeur null non prit en compte par le parser.)
+ *
+ * @return
+ */
+function add_partials( $key , $value ) {
+
+    if( !is_array($key) )
+        $key = array( $key => $value );
+
+    if( null === mp_cache_data( 'partials') )
+        mp_cache_data( 'partials', $key );
+    else
+        mp_cache_data( 'partials', array_merge( mp_cache_data( 'partials') , $key ) );
+}
+
+/**
  * display brackets
  * @return echo
  */
@@ -178,10 +197,16 @@ function get_brackets( $string, $args = array(), $partials = array() ){
 */
 function brackets( $string , $args = array() , $partials = array()  ){
 
-    $args     = wp_parse_args( $args, mp_cache_data('brackets') );
-    $partials = array_filter( wp_parse_args( $partials ) );
-    $vars     = array();
+    // On evite une boucle infini lors du parsage des partials
+    static $i = false;
+    if( !$i ){
+        $args     = wp_parse_args( $args, mp_cache_data('brackets') );
+        $partials = array_filter( wp_parse_args( $partials ), mp_cache_data('partials') );
+        $i = true;
+    }
 
+    // init table des variables
+    $vars       = array();
     // init table des boucles
     $args_array = array();
 

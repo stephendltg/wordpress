@@ -32,6 +32,16 @@ add_brackets( 'nav_menu'           , wp_nav_menu(
 
 
 
+
+/*
+ * Brackets - Template - header
+ */
+add_partials('get_header', get_template_brackets('header') );
+
+
+
+
+
 /*
  * Brackets - Arguments - footer
  */
@@ -40,6 +50,16 @@ add_brackets( 'developper-link' , esc_url( __( 'https://wordpress.org/', 'stephe
 add_brackets( 'developper'      , 'WordPress' );
 add_brackets( 'theme'           , 'stephendltg' );
 add_brackets( 'designer'        , '<a href="http://stephendeletang.alwaysdata.net/">stephen deletang</a>' );
+
+
+
+/*
+ * Brackets - Template - footer
+ */
+add_partials('get_footer' => get_template_brackets('footer') );
+
+
+
 
 /*
  * Brackets - Arguments - 404
@@ -65,17 +85,7 @@ $args = array(
 
 
 
-/*
- * Brackets - Partials
- */
-
-$partials = array(
-    'get_header' => get_template_brackets('header'),
-    'get_footer' => get_template_brackets('footer'),
-);
-
-
  /*
  * Brackets - Renderer
  */
-get_brackets( get_template_brackets('404'), $args, $partials );
+get_brackets( get_template_brackets('404'), $args );
