@@ -31,6 +31,19 @@ add_brackets( 'nav_menu'           , wp_nav_menu(
 );
 
 
+
+
+/*
+ * Brackets - Arguments - sidebar
+ */
+if( is_active_sidebar( 'sidebar-1' ) )
+	add_brackets( 'sidebar-1', ob_get_func( 'dynamic_sidebar', 'sidebar-1' ) );
+
+
+
+
+
+
 /*
  * Brackets - Arguments - footer
  */
@@ -41,10 +54,10 @@ add_brackets( 'theme'           , 'stephendltg' );
 add_brackets( 'designer' , '<a href="http://stephendeletang.alwaysdata.net/">stephen deletang</a>' );
 
 
+
 /*
  * Brackets - Arguments - 404
  */
-
 $archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'stephendltg' ), convert_smilies( ':)' ) ) . '</p>';
 
 $args =  array(
@@ -64,13 +77,21 @@ $args =  array(
 	'Widget_Tag_Cloud'      => ob_get_func('the_widget', 'WP_Widget_Tag_Cloud' ),
 );
 
+
+
+
+
 /*
  * Brackets - Partials
  */
 $partials= array(
-	'get_header' => get_template_brackets('header'),
-	'get_footer' => get_template_brackets('footer')
+	'get_header'  => get_template_brackets('header'),
+	'get_sidebar' => get_template_brackets('sidebar'),
+	'get_footer'  => get_template_brackets('footer')
 	);
+
+
+
 
  /*
  * Brackets - Renderer
