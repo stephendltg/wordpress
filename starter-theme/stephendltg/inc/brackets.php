@@ -149,30 +149,10 @@ function add_brackets( $key , $value ) {
 
 
 /**
- * Ajouter partiales brackets
- *
- * @param (string)     $key clé d'identification du brackets. 
- * @param (everything) $value valeur de la clé. (si valeur null non prit en compte par le parser.)
- *
- * @return
- */
-function add_partiales( $key , $value ) {
-
-    if( !is_array($key) )
-        $key = array( $key => $value );
-
-    if( null === mp_cache_data( 'brackets') )
-        mp_cache_data( 'partiales', array($key) );
-    else
-        mp_cache_data( 'partiales', array_merge( mp_cache_data('partiales') , array($key) ) );
-}
-
-
-/**
  * display brackets
  * @return echo
  */
-function get_brackets( $string, $args, $partials ){
+function get_brackets( $string, $args = array(), $partials = array() ){
 
     echo apply_filters( 'the_brackets', brackets( $string, $args, $partials ) );
 }
@@ -198,8 +178,8 @@ function get_brackets( $string, $args, $partials ){
 */
 function brackets( $string , $args = array() , $partials = array()  ){
 
-    $args     = wp_parse_args($args, mp_cache_data('brackets') );
-    $partials = array_filter( wp_parse_args( $partials, mp_cache_data('partiales') ) );
+    $args     = wp_parse_args( $args, mp_cache_data('brackets') );
+    $partials = array_filter( wp_parse_args( $partials ) );
     $vars     = array();
 
     // init table des boucles
@@ -262,10 +242,12 @@ function brackets( $string , $args = array() , $partials = array()  ){
     }
 
     /// On parse les partiales
+    
     foreach ($partials as $k => $v) {
         if( is_string($v) )
             $string = preg_replace( '/[{]{2}>'.trim(json_encode($k),'"').'[}]{2}/i', brackets( $v, $args), $string );
     }
+
 
     // On filtre les traductions
     preg_match_all( '/[{]{2}\@(.*?)\@[}]{2}/i', $string, $matches );

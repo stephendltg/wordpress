@@ -31,8 +31,9 @@ add_brackets( 'nav_menu'           , wp_nav_menu(
 );
 
 
+
 /*
- * Brackets - Arguments - header
+ * Brackets - Arguments - footer
  */
 add_brackets( 'wp_footer'       , ob_get_func('wp_footer') );
 add_brackets( 'developper-link' , esc_url( __( 'https://wordpress.org/', 'stephendltg' ) ) );
@@ -67,10 +68,12 @@ $args = array(
 /*
  * Brackets - Partials
  */
+
 $partials = array(
     'get_header' => get_template_brackets('header'),
     'get_footer' => get_template_brackets('footer'),
 );
+
 
  /*
  * Brackets - Renderer
