@@ -35,7 +35,7 @@ function stephendltg_brackets_header(){
 
 }
 // On ajoute les arguments à la fonction brackets
-add_brackets( mp_transient_data('brackets-args-header', 'stephendltg_brackets_header') );
+add_brackets( stephendltg_brackets_header() );
 
 
 
@@ -66,7 +66,7 @@ function stephendltg_brackets_footer(){
 	);
 }
 // On ajoute les arguments à la fonction brackets
-add_brackets( mp_transient_data('brackets-args-footer', 'stephendltg_brackets_footer') );
+add_brackets( stephendltg_brackets_footer() );
 
 
 
@@ -99,7 +99,6 @@ $args = mp_transient_data('brackets-args-404', 'stephendltg_brackets_404');
 
 
 
-
 /*
  * Brackets - Partials
  */
@@ -113,7 +112,6 @@ function stephendltg_brackets_partials(){
 }
 // On déclarer les partials du template
 $partials = mp_transient_data('brackets-partials', 'stephendltg_brackets_partials');
-
 
 
  /*
