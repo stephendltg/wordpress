@@ -12,6 +12,23 @@
  * @package stephendltg
  */
 
+$brackets_args =  array();
+
+/* Boucle principale wordpress */
+if(  have_posts() ){
+
+	while ( have_posts() ) {
+		the_post();
+		$brackets_args['posts-id'][] = get_the_ID();
+	}
+}
+
+$brackets_args['have-posts']       = have_posts();
+$brackets_args['posts-navigation'] = the_posts_navigation() ;
+
+
+//_echo($post);
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">

@@ -12,7 +12,7 @@
 			{{/is_home}}
 
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			{{#posts-id}}
 
 				/*
 				 * Include the Post-Format-specific template for the content.
@@ -21,9 +21,9 @@
 				 */
 				get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile;
+			{{/posts-id}}
 
-			the_posts_navigation();
+			{{posts-navigation}}
 
 		{{/have_posts}}
 		

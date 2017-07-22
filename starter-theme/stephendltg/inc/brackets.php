@@ -86,26 +86,35 @@ endif;
  * transient data
  *
  * @param  string $transient     Nom du transient
- * @param  string $function      Nom de la fonction qui recupère la valeur du transient
+ * @param  string $function      Nom de la fonction qui recupère la valeur du transient. Si null delete transient
  * @param  int    $expiration    Temps d'expiration du transient. ( 0 jamais expirer ) 
+ * @param  int    $params        Paramètres à passer à la fonction
  *
  * @return            Valeur du transient
  */
 if ( ! function_exists( 'mp_transient_data' ) ) :
 
-function mp_transient_data( $transient , $function, $expiration = 0 ){
+function mp_transient_data( $transient , $function , $expiration = 60 , $params = array() ){
 
     $transient  = (string) $transient;
-    $function   = (string) $function;
-    $expiration = (int) $expiration;   
+    $expiration = (int) $expiration;
+
+    if( null === $function){
+        delete_transient( $transient );
+        return;
+    }
 
     if ( false === ( $value = get_transient( $transient ) ) ) {
-        set_transient( $transient, call_user_func($function), $expiration );
+        set_transient( $transient, call_user_func_array( $function, $params ) , $expiration );
         $value = get_transient( $transient );
     }
+
     return $value; 
 }
+
 endif;
+
+
 
 
 /**
@@ -143,10 +152,15 @@ function get_template_brackets( $name = 'index' ){
  *
  * @return
  */
-function add_brackets( $key , $value ) {
+function add_brackets( $key ) {
 
+    $func_get_args = func_get_args();
+
+    if ( array_key_exists( 1, $func_get_args ) )
+        $key = array( $key => $func_get_args[1] );
+    
     if( !is_array($key) )
-        $key = array( $key => $value );
+        return;
 
     if( null === mp_cache_data( 'brackets') )
         mp_cache_data( 'brackets', $key );
@@ -154,15 +168,6 @@ function add_brackets( $key , $value ) {
         mp_cache_data( 'brackets', array_merge( mp_cache_data( 'brackets') , $key ) );
 }
 
-
-/**
- * display brackets
- * @return echo
- */
-function get_brackets( $string, $args = array(), $partials = array() ){
-
-    echo apply_filters( 'the_brackets', brackets( $string, $args, $partials ) );
-}
 
 
 /**
