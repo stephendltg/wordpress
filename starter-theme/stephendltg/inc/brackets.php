@@ -100,13 +100,13 @@ function mp_transient_data( $transient , $function , $expiration = 60 , $params 
     $expiration = (int) $expiration;
 
     if( null === $function){
-        delete_transient( $transient );
+        delete_site_transient( $transient );
         return;
     }
 
-    if ( false === ( $value = get_transient( $transient ) ) ) {
-        set_transient( $transient, call_user_func_array( $function, $params ) , $expiration );
-        $value = get_transient( $transient );
+    if ( false === ( $value = get_site_transient( $transient ) ) ) {
+        set_site_transient( $transient, call_user_func_array( $function, $params ) , $expiration );
+        $value = get_site_transient( $transient );
     }
 
     return $value; 
@@ -222,6 +222,12 @@ function brackets( $string , $args = array() , $partials = array()  ){
     $vars = array_filter($vars);
     $args = array_filter($args);
 
+    // On parse les partiales
+    foreach ($partials as $k => $v) {
+        if( is_string($v) )
+            $string = preg_replace( '/[{]{2}>'.trim(json_encode($k),'"').'[}]{2}/i', $v, $string );
+    }
+
     // On scrute les boucles foreach
     foreach ( $args as $key => $value) {
 
@@ -251,14 +257,6 @@ function brackets( $string , $args = array() , $partials = array()  ){
             $string = str_replace($match[0], trim($result), $string);
         }
     }
-
-    /// On parse les partiales
-    
-    foreach ($partials as $k => $v) {
-        if( is_string($v) )
-            $string = preg_replace( '/[{]{2}>'.trim(json_encode($k),'"').'[}]{2}/i', brackets( $v, $args), $string );
-    }
-
 
     // On filtre les traductions
     preg_match_all( '/[{]{2}\@(.*?)\@[}]{2}/i', $string, $matches );

@@ -119,5 +119,6 @@ $partials = mp_transient_data('brackets-partials', 'stephendltg_brackets_partial
  /*
  * Brackets - Renderer
  */
+$template_404 = mp_transient_data('brackets-template-404', 'get_template_brackets', 60, array('404') );
 
-echo mp_transient_data('brackets-template-404', 'brackets', 60 , array( get_template_brackets('404'), $args, $partials ) );
+echo brackets( $template_404, $args, $partials);
