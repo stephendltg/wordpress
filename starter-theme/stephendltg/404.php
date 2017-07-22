@@ -110,13 +110,9 @@ function stephendltg_brackets_partials(){
 		'get_footer'  => get_template_brackets('footer')
 	);
 }
-// On déclarer les partials du template
-$partials = mp_transient_data('brackets-partials', 'stephendltg_brackets_partials');
 
 
  /*
  * Brackets - Renderer
  */
-$template_404 = mp_transient_data('brackets-template-404', 'get_template_brackets', 60, array('404') );
-
-echo brackets( $template_404, $args, $partials);
+echo brackets( get_template_brackets('404'), $args, stephendltg_brackets_partials() );

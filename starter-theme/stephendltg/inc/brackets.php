@@ -131,9 +131,12 @@ if ( ! function_exists( 'brackets' ) ) :
  * @param  string $name     Nom du template
  * @return string           Contenu du template
  */
-function get_template_brackets( $name = 'index' ){
+function get_template_brackets( $name = 'index' , $expiration = 0 ){
 
     $name = (string) $name;
+
+    if( is_integer($expiration) )
+        return mp_transient_data('stephendltg-template-'.$name, 'get_template_brackets', $expiration, array($name, false) );
 
     $template = current( glob(get_template_directory() . '/templates/'.$name.'.html') );
     $template = apply_filters('mp_template_brackets', $template, $name);
